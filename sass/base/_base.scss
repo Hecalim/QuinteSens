@@ -1,0 +1,27 @@
+@use "../abstracts/index" as abstracts;
+
+html{
+    /* 62.5% of 16px user agent font size is 10px */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-block-start: 8rem;
+}
+body{
+    /* revert to 16px */
+    font-size: abstracts.$text-base; // 1.6rem
+    font-family: 'Inter', 'Roboto', Arial, sans-serif;
+    color: var(--brand-secondary-300);
+}
+.block{
+    display: block;
+}
+.inline-block{
+    display: inline-block;
+}
+ul{
+    padding: 0;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}

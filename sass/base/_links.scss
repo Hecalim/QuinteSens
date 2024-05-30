@@ -1,0 +1,8 @@
+.link{
+    &--footer{
+        color: var(--brand-primary-300);
+        &:hover{
+            color: var(--brand-primary-100);
+        }
+    }
+}

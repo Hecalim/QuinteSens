@@ -1,0 +1,70 @@
+@use "../abstracts/index" as abstracts;
+
+fieldset{
+    padding: 0;
+    border: none;
+}
+.label{
+    font-family: 'Solway', 'Hanuman', 'Times New Roman', Times, serif;
+    font-weight: 600;
+    color: var(--brand-secondary-400);
+}
+.warning{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    top: .8rem;
+    font-family: 'Solway', 'Hanuman', 'Times New Roman', Times, serif;
+    font-size: 1.125rem;
+    line-height: 1;
+    font-weight: 600;
+    color: var(--red-200);
+    text-align: right;
+    visibility: hidden;
+}
+.input{
+    width: 100%;
+    padding: .8rem 1.2rem .8rem 1.6rem;
+    background-color: var(--grey-100);
+    border: solid 1px var(--brand-secondary-200);
+    box-shadow: 0 2px 0 0 var(--brand-secondary-200);
+    font-size: 1.6rem;
+    &--icon{
+        &::before{
+            content: 'test';
+            display: block;
+            position: absolute;
+        }
+    }
+    &:hover{
+        border: solid 1px var(--brand-secondary-400);
+        box-shadow: 0 2px 0 0 var(--brand-secondary-400);
+    }
+    &:focus{
+        outline: transparent;
+        box-shadow:
+             0 2px 0 0 var(--brand-secondary-400),
+            0 0 0 2px var(--blue-200),
+            0 2px 0 2px var(--blue-200);
+        ;
+    }
+}
+textarea{
+    border-radius: 12px;
+    height: 20vh;
+    min-height: 180px;
+    resize: vertical;
+    + .warning{
+        top: -.8rem;
+    }
+}
+input{
+    &[type="submit"]{
+        &::before{
+            content: '';
+            display: block;
+            @include abstracts.box(22px, 15px);
+            background-image: url(../../public/images/send.svg);
+        }
+    }
+}

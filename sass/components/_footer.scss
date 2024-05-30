@@ -1,0 +1,16 @@
+@use "../abstracts/index" as abstracts;
+
+.footer{
+    display: flex;
+    > div{
+        @include abstracts.flex(row, flex-start, space-between);
+        padding-block: 4.8rem;
+    }
+    hr{
+        border-width: 1px;
+        border-color: var(--brand-secondary-200);
+        + span{
+            padding-block: 2.4rem;
+        }
+    }
+}

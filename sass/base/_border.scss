@@ -1,0 +1,30 @@
+@use "../abstracts/index" as abstracts;
+
+// Border radius
+.rounded{
+    &-none{
+        border-radius: 0;
+    }
+    &-xs{
+        border-radius: calc(abstracts.$base-unit * 0.66);
+    }
+    &-sm{
+        border-radius: calc(abstracts.$base-unit * 0.8);
+    }
+        border-radius: calc(abstracts.$base-unit * 1);
+    &-md{
+        border-radius: calc(abstracts.$base-unit * 1.25);
+    }
+    &-lg{
+        border-radius: calc(abstracts.$base-unit * 1.75);
+    }
+    &-xl{
+        border-radius: calc(abstracts.$base-unit * 2.25);
+    }
+    &-2xl{
+        border-radius: calc(abstracts.$base-unit * 2.6);
+    }
+    &-full{
+        border-radius: 9999px;
+    }
+}

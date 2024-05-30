@@ -1,0 +1,566 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quinte & Sens</title>
+    <script type="module" src="main.js" defer></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanuman:wght@100;300;400;700;900&family=Inter:wght@100..900&family=Roboto&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Solway:wght@300;400;500;700;800&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-brand-primary-300">
+    <!-- top header -->
+    <header
+      class="header flex items-center just-between p-x-4 p-y-2 bg-brand-primary-300"
+    >
+      <!-- Watermark : logo + baseline -->
+      <a
+        href="#start"
+        class="watermark flex items-center gap-2 txt-xl leading-none txt-brand-secondary-300"
+      >
+        <svg
+          id="logo"
+          class="watermark__logo fill-brand-secondary-300"
+          width="40"
+          length="auto"
+          viewBox="0 0 57 51"
+        >
+          <g>
+            <path
+              d="M17.0881 6.39247C17.0881 5.00797 15.9873 3.88562 14.6294 3.88562C13.2715 3.88562 12.1707 5.00797 12.1707 6.39247V45.2486C12.1707 46.6331 13.2715 47.7555 14.6294 47.7555C15.9873 47.7555 17.0881 46.6331 17.0881 45.2486V6.39247Z"
+            />
+            <path
+              d="M26.8001 2.50685C26.8001 1.12235 25.6992 0 24.3413 0C22.9834 0 21.8826 1.12235 21.8826 2.50685V41.363C21.8826 42.7475 22.9834 43.8699 24.3413 43.8699C25.6992 43.8699 26.8001 42.7475 26.8001 41.363V2.50685Z"
+            />
+            <path
+              d="M35.7744 9.02467C35.7744 7.64018 34.6736 6.51782 33.3157 6.51782C31.9578 6.51782 30.857 7.64018 30.857 9.02467V47.8808C30.857 49.2653 31.9578 50.3877 33.3157 50.3877C34.6736 50.3877 35.7744 49.2653 35.7744 47.8808V9.02467Z"
+            />
+            <path
+              d="M45.3634 2.88283C45.3634 1.49833 44.2626 0.375977 42.9047 0.375977C41.5468 0.375977 40.446 1.49833 40.446 2.88283V41.739C40.446 43.1235 41.5468 44.2458 42.9047 44.2458C44.2626 44.2458 45.3634 43.1235 45.3634 41.739V2.88283Z"
+            />
+            <path
+              d="M6.76148 15.0411C7.91571 15.0411 8.8514 14.0871 8.8514 12.9102C8.8514 11.7334 7.91571 10.7794 6.76148 10.7794C5.60726 10.7794 4.67157 11.7334 4.67157 12.9102C4.67157 14.0871 5.60726 15.0411 6.76148 15.0411Z"
+            />
+            <path
+              d="M2.08991 20.0547C3.24414 20.0547 4.17983 19.1007 4.17983 17.9239C4.17983 16.7471 3.24414 15.7931 2.08991 15.7931C0.935686 15.7931 0 16.7471 0 17.9239C0 19.1007 0.935686 20.0547 2.08991 20.0547Z"
+            />
+            <path
+              d="M6.76148 23.6897C7.91571 23.6897 8.8514 22.7357 8.8514 21.5589C8.8514 20.3821 7.91571 19.4281 6.76148 19.4281C5.60726 19.4281 4.67157 20.3821 4.67157 21.5589C4.67157 22.7357 5.60726 23.6897 6.76148 23.6897Z"
+            />
+            <path
+              d="M2.08991 28.7034C3.24414 28.7034 4.17983 27.7494 4.17983 26.5726C4.17983 25.3958 3.24414 24.4418 2.08991 24.4418C0.935686 24.4418 0 25.3958 0 26.5726C0 27.7494 0.935686 28.7034 2.08991 28.7034Z"
+            />
+            <path
+              d="M6.76148 32.3383C7.91571 32.3383 8.8514 31.3843 8.8514 30.2075C8.8514 29.0307 7.91571 28.0767 6.76148 28.0767C5.60726 28.0767 4.67157 29.0307 4.67157 30.2075C4.67157 31.3843 5.60726 32.3383 6.76148 32.3383Z"
+            />
+            <path
+              d="M2.08991 37.3521C3.24414 37.3521 4.17983 36.3981 4.17983 35.2213C4.17983 34.0445 3.24414 33.0905 2.08991 33.0905C0.935686 33.0905 0 34.0445 0 35.2213C0 36.3981 0.935686 37.3521 2.08991 37.3521Z"
+            />
+            <path
+              d="M6.76148 40.987C7.91571 40.987 8.8514 40.033 8.8514 38.8562C8.8514 37.6793 7.91571 36.7253 6.76148 36.7253C5.60726 36.7253 4.67157 37.6793 4.67157 38.8562C4.67157 40.033 5.60726 40.987 6.76148 40.987Z"
+            />
+            <path
+              d="M50.1579 35.2212C51.3121 35.2212 52.2478 34.2672 52.2478 33.0904C52.2478 31.9136 51.3121 30.9596 50.1579 30.9596C49.0037 30.9596 48.068 31.9136 48.068 33.0904C48.068 34.2672 49.0037 35.2212 50.1579 35.2212Z"
+            />
+            <path
+              d="M54.8295 30.2076C55.9837 30.2076 56.9194 29.2536 56.9194 28.0767C56.9194 26.8999 55.9837 25.9459 54.8295 25.9459C53.6752 25.9459 52.7396 26.8999 52.7396 28.0767C52.7396 29.2536 53.6752 30.2076 54.8295 30.2076Z"
+            />
+            <path
+              d="M50.1579 26.5726C51.3121 26.5726 52.2478 25.6186 52.2478 24.4417C52.2478 23.2649 51.3121 22.3109 50.1579 22.3109C49.0037 22.3109 48.068 23.2649 48.068 24.4417C48.068 25.6186 49.0037 26.5726 50.1579 26.5726Z"
+            />
+            <path
+              d="M54.8295 21.5589C55.9837 21.5589 56.9194 20.6049 56.9194 19.4281C56.9194 18.2512 55.9837 17.2972 54.8295 17.2972C53.6752 17.2972 52.7396 18.2512 52.7396 19.4281C52.7396 20.6049 53.6752 21.5589 54.8295 21.5589Z"
+            />
+            <path
+              d="M50.1579 17.924C51.3121 17.924 52.2478 16.97 52.2478 15.7932C52.2478 14.6164 51.3121 13.6624 50.1579 13.6624C49.0037 13.6624 48.068 14.6164 48.068 15.7932C48.068 16.97 49.0037 17.924 50.1579 17.924Z"
+            />
+            <path
+              d="M54.8295 12.9103C55.9837 12.9103 56.9194 11.9563 56.9194 10.7795C56.9194 9.60268 55.9837 8.64868 54.8295 8.64868C53.6752 8.64868 52.7396 9.60268 52.7396 10.7795C52.7396 11.9563 53.6752 12.9103 54.8295 12.9103Z"
+            />
+            <path
+              d="M50.1579 9.27532C51.3121 9.27532 52.2478 8.32131 52.2478 7.14449C52.2478 5.96767 51.3121 5.01367 50.1579 5.01367C49.0037 5.01367 48.068 5.96767 48.068 7.14449C48.068 8.32131 49.0037 9.27532 50.1579 9.27532Z"
+            />
+          </g>
+        </svg>
+        <span class="watermark__baseline">Quinte & Sens</span>
+      </a>
+      <!-- nav navigation -->
+      <nav class="flex items-center just-start gap-1-5">
+        <ul class="nav-main txt-center txt-base font-medium">
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            <a href="#faq">F.A.Q</a>
+          </li>
+        </ul>
+        <a href="#contacts" class="btn txt-base">
+          <svg
+            id="svg-contacts"
+            width="20"
+            height="15"
+            viewBox="0 0 22 16"
+            fill="transparent"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 5L11 8.5L16 5"
+              stroke="var(--brand-primary-100)"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M1 13V3C1 2.46957 1.21071 1.96086 1.58579 1.58579C1.96086 1.21071 2.46957 1 3 1H19C19.5304 1 20.0391 1.21071 20.4142 1.58579C20.7893 1.96086 21 2.46957 21 3V13C21 13.5304 20.7893 14.0391 20.4142 14.4142C20.0391 14.7893 19.5304 15 19 15H3C2.46957 15 1.96086 14.7893 1.58579 14.4142C1.21071 14.0391 1 13.5304 1 13Z"
+              stroke="var(--brand-primary-100)"
+              stroke-width="1.5"
+            />
+          </svg>
+          <span>Contactez-moi</span>
+        </a>
+      </nav>
+    </header>
+
+    <main id="start" class="content-grid">
+      <!-- Hero -->
+      <section class="hero">
+        <h1 class="flex flex-col font-bold txt-brand-secondary-300">
+          <span>
+            <span class="txt-brand-fourth-300">Artisan </span>
+            <span>réparateur</span>
+          </span>
+          <span class="p-l-5">d'accordéons</span>
+        </h1>
+        <h2 class="txt-grey-100">près de Lannion</h2>
+        <p class="m-y-4 txt-justify">
+          Pariatur ex officia sint do eu mollit aliqua velit ad magna velit
+          elit. Ea mollit et quis ex eu fugiat excepteur reprehenderit irure. Ex
+          voluptate deserunt ad elit quis occaecat nostrud occaecat ullamco non
+          reprehenderit sunt nostrud sunt.
+        </p>
+        <a href="#contacts" class="btn btn--xl">
+          <svg viewBox="0 0 22 16">
+            <use href="#svg-contacts" />
+          </svg>
+          <span>Contactez-moi</span>
+        </a>
+      </section>
+
+      <!-- About me -->
+      <section id="about" class="about breakout p-4 rounded-lg">
+        <h3>About me</h3>
+        <h4 class="txt-brand-primary-200">Lucas Maugis</h4>
+        <img
+          src="public/images/lucas.jpg"
+          alt="Photographie de Lucas Maugis, artisan"
+          class="rounded-xl"
+        />
+        <p class="txt-grey-100 txt-justify">
+          Passionné de musique et de mécanique, j’ai rapidement décidé de me
+          former au métier d’accordeur / réparateur d’instruments de musique, me
+          permettant ainsi d’allier parfaitement mes deux passions.<br /><br />J’ai
+          effectué mon cursus de formation dans le Gers accompagné du maître
+          artisan Éric Callégari auprès de qui j’ai appris, durant 6 années, les
+          métiers d’accordeur / réparateur de pianos et d’accordéons.<br /><br />Je
+          reviens aujourd’hui à mes racines en Bretagne, avec la volonté de vous
+          proposer les services et tout le soin dont votre instrument a besoin.
+        </p>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="services full-width bg-brand-primary-100">
+        <h3 class="txt-center">Services</h3>
+        <h4 class="txt-center">Explore what I have to offer</h4>
+        <ul class="flex items-center just-between">
+          <li>
+            <img src="" alt="">
+            <h5>Accordage</h5>
+            <p></p>
+          </li>
+          <li>
+            <img src="" alt="">
+            <h5>Réparations</h5>
+            <p></p>
+          </li>
+          <li>
+            <img src="" alt="">
+            <h5>Réglages</h5>
+            <p></p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Review -->
+      <section id="review" class="full-width rel bg-brand-fourth-300">
+        <h3 class="txt-center">Trusted by many</h3>
+        <h4 class="txt-brand-primary-200 txt-center">
+          See what our clients say about us.
+        </h4>
+        <div class="scroller full-width" data-speed="slow">
+          <ul class="review tag-list scroller__inner rel full-width">
+            <li class="review__item bg-brand-fourth-200 rounded-lg">
+              <h5 class="txt-medium">Résumé avis 1</h5>
+              <p class="flex-grow txt-sm txt-justify">
+                Ullamco consectetur irure aliqua ea.
+              </p>
+              <span class="txt-sm">Nom Prénom</span>
+            </li>
+            <li class="review__item bg-brand-fourth-200 rounded-lg">
+              <h5 class="txt-medium">Résumé avis 2</h5>
+              <p class="flex-grow txt-sm txt-justify">
+                Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
+                duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
+                nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
+                nulla esse sit dolor consectetur.
+              </p>
+              <span class="txt-sm">Nom Prénom</span>
+            </li>
+            <li class="review__item bg-brand-fourth-200 rounded-lg">
+              <h5 class="txt-medium">Résumé avis 3</h5>
+              <p class="flex-grow txt-sm txt-justify">
+                Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
+                duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
+                nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
+                nulla esse sit dolor consectetur. Do sit incididunt eu
+                consequat. Non non sint cupidatat Lorem laborum reprehenderit
+                nostrud. Irure velit mollit reprehenderit cupidatat eu occaecat
+                laboris duis amet ullamco dolor est.
+              </p>
+              <span class="txt-sm">Nom Prénom</span>
+            </li>
+            <li class="review__item bg-brand-fourth-200 rounded-lg">
+              <h5 class="txt-medium">Résumé avis 4</h5>
+              <p class="flex-grow txt-sm txt-justify">
+                Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
+                duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
+                nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
+                nulla esse sit dolor consectetur. Do sit incididunt eu
+                consequat. Non non sint cupidatat Lorem laborum reprehenderit
+                nostrud. Irure velit mollit reprehenderit cupidatat eu occaecat
+                laboris duis amet ullamco dolor est.
+              </p>
+              <span class="txt-sm">Nom Prénom</span>
+            </li>
+            <li class="review__item bg-brand-fourth-200 rounded-lg">
+              <h5 class="txt-medium">Résumé avis 5</h5>
+              <p class="flex-grow txt-sm txt-justify">
+                Ullamco consectetur irure aliqua ea.
+              </p>
+              <span class="txt-sm">Nom Prénom</span>
+            </li>
+            <li class="review__item bg-brand-fourth-200 rounded-lg">
+              <h5 class="txt-medium">Résumé avis 6</h5>
+              <p class="flex-grow txt-sm txt-justify">
+                Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
+                duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
+                nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
+                nulla esse sit dolor consectetur.
+              </p>
+              <span class="txt-sm">Nom Prénom</span>
+            </li>
+            <li class="review__item bg-brand-fourth-200 rounded-lg">
+              <h5 class="txt-medium">Résumé avis 7</h5>
+              <p class="flex-grow txt-sm txt-justify">
+                Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
+                duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
+                nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
+                nulla esse sit dolor consectetur. Do sit incididunt eu
+                consequat. Non non sint cupidatat Lorem laborum reprehenderit
+                nostrud. Irure velit mollit reprehenderit cupidatat eu occaecat
+                laboris duis amet ullamco dolor est.
+              </p>
+              <span class="txt-sm">Nom Prénom</span>
+            </li>
+            <li class="review__item bg-brand-fourth-200 rounded-lg">
+              <h5 class="txt-medium">Résumé avis 8</h5>
+              <p class="flex-grow txt-sm txt-justify">
+                Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
+                duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
+                nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
+                nulla esse sit dolor consectetur. Do sit incididunt eu
+                consequat. Non non sint cupidatat Lorem laborum reprehenderit
+                nostrud. Irure velit mollit reprehenderit cupidatat eu occaecat
+                laboris duis amet ullamco dolor est.
+              </p>
+              <span class="txt-sm">Nom Prénom</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section id="gallery">
+        <h3>Gallery</h3>
+        <h4>View my work and creations.</h4>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="flex flex-col bg-brand-third-400 full-width">
+        <h3 class="txt-center">FAQ</h3>
+        <h4 class="txt-center txt-brand-primary-200">Need help ?</h4>
+        <!-- FAQ item 1-->
+        <label for="question1" class="faq">
+          <span class="faq__question">
+            Sur quels types d'accordéons travaillez-vous ?
+          </span>
+          <input id="question1" name="faq" type="checkbox" />
+          <span class="faq__icon"></span>
+          <p class="faq__answer">
+            <span>
+              En tant qu'artisan, je m'occupe de tout type d'accordéons,
+              chromatique ou diatonique. Je peux également m'occuper d'autres
+              instruments à anches libres comme les bandonéons, harmonicas,
+              mélodicas...
+            </span>
+          </p>
+        </label>
+        <!-- FAQ item 2-->
+        <label for="question2" class="faq">
+          <span class="faq__question">
+            Proposez-vous des services de réparation d'accordéons
+          </span>
+          <input id="question2" name="faq" type="checkbox" />
+          <span class="faq__icon"></span>
+          <p class="faq__answer">
+            <span>
+              Oui, en tant qu'artisan spécialisé dans la réparation
+              d'accordéons, je propose des services de réparation pour les
+              accordéons de toutes marques. Que ce soit pour des ajustements
+              mineurs, des révisions ou des réparations majeures, je suis équipé
+              pour restaurer votre instrument dans les meilleures conditions.
+            </span>
+          </p>
+        </label>
+        <!-- FAQ item 3-->
+        <label for="question3" class="faq">
+          <span class="faq__question">
+            Comment puis-je entretenir mon accordéon ?
+          </span>
+          <input id="question3" type="checkbox" />
+          <span class="faq__icon"></span>
+          <p class="faq__answer">
+            <span>
+              Il est recommandé de faire une révision rapide par an, auprès d'un
+              professionnel. Cette dernière comprend un dépoussiérage complet,
+              une retouche rapide de l'accord si nécessaire, ainsi qu'un
+              diagnostique rapide de l'état de l'accordéon afin de suivre son
+              état et de prévenir si des travaux plus important sont nécessaires
+              ou à envisager. Lorsqu'inutilisé, privilégiez de le ranger dans sa
+              caisse ou sa house, jamais en hauteur, à l'abris de l'humidité et
+              des fortes chaleurs (évitez son exposition au soleil par exemple,
+              il y a de la cire dans les accordéons, diatoniques notamment).
+            </span>
+          </p>
+        </label>
+        <!-- FAQ item 4-->
+        <label for="question4" class="faq">
+          <span class="faq__question">
+            Proposez-vous d'autres services que la réparation d'accordéons ?
+          </span>
+          <input id="question4" name="faq" type="checkbox" />
+          <span class="faq__icon"></span>
+          <p class="faq__answer">
+            <span>
+              Oui, je propose également l'accordage et réglage de pianos à
+              domicile.
+            </span>
+          </p>
+        </label>
+        <div class="grid grid--questions breakout m-t-4 p-4 rounded-lg bg-brand-secondary-300 txt-grey-100">
+          <h5 class="txt-lg font-normal">Still have question ?</h5>
+          <p>
+            Can't find the answer you're looking for ? Please chat to our
+            friendly team.
+          </p>
+          <a href="#contacts" class="btn btn--xl">
+            <svg viewBox="0 0 22 16">
+              <use href="#svg-contacts" />
+            </svg>
+            <span>Contactez-moi</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Contacts -->
+      <section id="contacts" class="grid grid--contacts">
+        <h3>Let's talk</h3>
+        <h4>Go ahead and send us a brief of your project !</h4>
+        <form action="" id="js-contacts" novalidate>
+          <fieldset class="flex flex-col">
+            <label for="name" class="label p-l-2 txt-xs">Name</label>
+            <input type="text" id="name" class="input rounded-full" required />
+            <span class="warning txt-xs"
+              >Veuillez renseigner un identifiant valide.</span
+            >
+            <label for="email" class="label p-l-2 txt-xs">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              class="input input--icon rel rounded-full"
+              required
+            />
+            <span class="warning txt-xs"
+              >Veuillez renseigner un email valide.</span
+            >
+            <label for="phone" class="label p-l-2 txt-xs">
+              Phone
+              <span class="txt-xs txt-brand-fourth-300">(optionnal)</span>
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              class="input input--icon rel rounded-full"
+            />
+            <span class="warning txt-xs"
+              >Veuillez renseigner un numéro valide.</span
+            >
+          </fieldset>
+          <fieldset>
+            <label for="comment" class="label p-l-2 txt-xs">Message</label>
+            <textarea name="comment" id="comment" class="input" required>
+            </textarea>
+            <span class="warning txt-xs">Vérifiez votre message.</span>
+          </fieldset>
+          <button type="submit" class="btn btn--xl">
+            <svg
+              width="22"
+              height="18"
+              viewBox="0 0 22 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.5 1.5L1.5 9L8.5 10M20.5 1.5L18 16.5L8.5 10M20.5 1.5L8.5 10M8.5 10V15.5L11.749 12.223"
+                stroke="#F5E6D6"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>Envoyer</span>
+          </button>
+        </form>
+        <div id="map" class="map rel">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d168378.52685362598!2d-3.634545596304883!3d48.74533034809212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48122b8ac523c539%3A0x40ca5cd36e63400!2s22300%20Lannion!5e0!3m2!1sfr!2sfr!4v1716823102629!5m2!1sfr!2sfr"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="footer full-width bg-brand-secondary-300 txt-brand-primary-300"
+    >
+      <!-- Watermark -->
+      <div>
+        <span class="watermark flex items-center gap-2 txt-xl leading-none">
+          <svg
+            id="logo"
+            class="watermark__logo fill-brand-primary-300"
+            width="48"
+            length="auto"
+            viewBox="0 0 57 51"
+          >
+            <g>
+              <path
+                d="M17.0881 6.39247C17.0881 5.00797 15.9873 3.88562 14.6294 3.88562C13.2715 3.88562 12.1707 5.00797 12.1707 6.39247V45.2486C12.1707 46.6331 13.2715 47.7555 14.6294 47.7555C15.9873 47.7555 17.0881 46.6331 17.0881 45.2486V6.39247Z"
+              />
+              <path
+                d="M26.8001 2.50685C26.8001 1.12235 25.6992 0 24.3413 0C22.9834 0 21.8826 1.12235 21.8826 2.50685V41.363C21.8826 42.7475 22.9834 43.8699 24.3413 43.8699C25.6992 43.8699 26.8001 42.7475 26.8001 41.363V2.50685Z"
+              />
+              <path
+                d="M35.7744 9.02467C35.7744 7.64018 34.6736 6.51782 33.3157 6.51782C31.9578 6.51782 30.857 7.64018 30.857 9.02467V47.8808C30.857 49.2653 31.9578 50.3877 33.3157 50.3877C34.6736 50.3877 35.7744 49.2653 35.7744 47.8808V9.02467Z"
+              />
+              <path
+                d="M45.3634 2.88283C45.3634 1.49833 44.2626 0.375977 42.9047 0.375977C41.5468 0.375977 40.446 1.49833 40.446 2.88283V41.739C40.446 43.1235 41.5468 44.2458 42.9047 44.2458C44.2626 44.2458 45.3634 43.1235 45.3634 41.739V2.88283Z"
+              />
+              <path
+                d="M6.76148 15.0411C7.91571 15.0411 8.8514 14.0871 8.8514 12.9102C8.8514 11.7334 7.91571 10.7794 6.76148 10.7794C5.60726 10.7794 4.67157 11.7334 4.67157 12.9102C4.67157 14.0871 5.60726 15.0411 6.76148 15.0411Z"
+              />
+              <path
+                d="M2.08991 20.0547C3.24414 20.0547 4.17983 19.1007 4.17983 17.9239C4.17983 16.7471 3.24414 15.7931 2.08991 15.7931C0.935686 15.7931 0 16.7471 0 17.9239C0 19.1007 0.935686 20.0547 2.08991 20.0547Z"
+              />
+              <path
+                d="M6.76148 23.6897C7.91571 23.6897 8.8514 22.7357 8.8514 21.5589C8.8514 20.3821 7.91571 19.4281 6.76148 19.4281C5.60726 19.4281 4.67157 20.3821 4.67157 21.5589C4.67157 22.7357 5.60726 23.6897 6.76148 23.6897Z"
+              />
+              <path
+                d="M2.08991 28.7034C3.24414 28.7034 4.17983 27.7494 4.17983 26.5726C4.17983 25.3958 3.24414 24.4418 2.08991 24.4418C0.935686 24.4418 0 25.3958 0 26.5726C0 27.7494 0.935686 28.7034 2.08991 28.7034Z"
+              />
+              <path
+                d="M6.76148 32.3383C7.91571 32.3383 8.8514 31.3843 8.8514 30.2075C8.8514 29.0307 7.91571 28.0767 6.76148 28.0767C5.60726 28.0767 4.67157 29.0307 4.67157 30.2075C4.67157 31.3843 5.60726 32.3383 6.76148 32.3383Z"
+              />
+              <path
+                d="M2.08991 37.3521C3.24414 37.3521 4.17983 36.3981 4.17983 35.2213C4.17983 34.0445 3.24414 33.0905 2.08991 33.0905C0.935686 33.0905 0 34.0445 0 35.2213C0 36.3981 0.935686 37.3521 2.08991 37.3521Z"
+              />
+              <path
+                d="M6.76148 40.987C7.91571 40.987 8.8514 40.033 8.8514 38.8562C8.8514 37.6793 7.91571 36.7253 6.76148 36.7253C5.60726 36.7253 4.67157 37.6793 4.67157 38.8562C4.67157 40.033 5.60726 40.987 6.76148 40.987Z"
+              />
+              <path
+                d="M50.1579 35.2212C51.3121 35.2212 52.2478 34.2672 52.2478 33.0904C52.2478 31.9136 51.3121 30.9596 50.1579 30.9596C49.0037 30.9596 48.068 31.9136 48.068 33.0904C48.068 34.2672 49.0037 35.2212 50.1579 35.2212Z"
+              />
+              <path
+                d="M54.8295 30.2076C55.9837 30.2076 56.9194 29.2536 56.9194 28.0767C56.9194 26.8999 55.9837 25.9459 54.8295 25.9459C53.6752 25.9459 52.7396 26.8999 52.7396 28.0767C52.7396 29.2536 53.6752 30.2076 54.8295 30.2076Z"
+              />
+              <path
+                d="M50.1579 26.5726C51.3121 26.5726 52.2478 25.6186 52.2478 24.4417C52.2478 23.2649 51.3121 22.3109 50.1579 22.3109C49.0037 22.3109 48.068 23.2649 48.068 24.4417C48.068 25.6186 49.0037 26.5726 50.1579 26.5726Z"
+              />
+              <path
+                d="M54.8295 21.5589C55.9837 21.5589 56.9194 20.6049 56.9194 19.4281C56.9194 18.2512 55.9837 17.2972 54.8295 17.2972C53.6752 17.2972 52.7396 18.2512 52.7396 19.4281C52.7396 20.6049 53.6752 21.5589 54.8295 21.5589Z"
+              />
+              <path
+                d="M50.1579 17.924C51.3121 17.924 52.2478 16.97 52.2478 15.7932C52.2478 14.6164 51.3121 13.6624 50.1579 13.6624C49.0037 13.6624 48.068 14.6164 48.068 15.7932C48.068 16.97 49.0037 17.924 50.1579 17.924Z"
+              />
+              <path
+                d="M54.8295 12.9103C55.9837 12.9103 56.9194 11.9563 56.9194 10.7795C56.9194 9.60268 55.9837 8.64868 54.8295 8.64868C53.6752 8.64868 52.7396 9.60268 52.7396 10.7795C52.7396 11.9563 53.6752 12.9103 54.8295 12.9103Z"
+              />
+              <path
+                d="M50.1579 9.27532C51.3121 9.27532 52.2478 8.32131 52.2478 7.14449C52.2478 5.96767 51.3121 5.01367 50.1579 5.01367C49.0037 5.01367 48.068 5.96767 48.068 7.14449C48.068 8.32131 49.0037 9.27532 50.1579 9.27532Z"
+              />
+            </g>
+          </svg>
+          <span class="watermark__baseline">Quinte & Sens</span>
+        </span>
+        <!-- Navigation -->
+        <ul class="txt-sm font-medium">
+          <li class="m-b-1-5 txt-right">
+            <a href="#about" class="link--footer">About</a>
+          </li>
+          <li class="m-b-1-5 txt-right">
+            <a href="#services" class="link--footer">Services</a>
+          </li>
+          <li class="m-b-1-5 txt-right">
+            <a href="#faq" class="link--footer">F.A.Q</a>
+          </li>
+          <li class="m-b-1-5 txt-right">
+            <a href="#contacts" class="link--footer">Contacts</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Copyright-->
+      <hr class="full-width txt-brand-fourth-300" />
+      <span class="w-full txt-xs txt-center"
+        >© 2024 Quinte&Sens. Tous droits réservés</span
+      >
+    </footer>
+  </body>
+</html>

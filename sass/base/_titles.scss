@@ -1,0 +1,28 @@
+h1{
+    font-family: "Sora", "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 5.6rem;
+    font-weight: 800;
+    line-height: 1;
+    gap: 1.2rem;
+}
+h2{
+    font-family: "Solway", "Hanuman", 'Times New Roman', Times, serif;
+    font-size: 4.8rem;
+}
+h3{
+    height: fit-content;
+    margin-bottom: .8rem;
+    font-family: "Sora", "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 2.8rem;
+    line-height: 1;
+    color: var(--brand-secondary-400);
+}
+h4{
+    height: fit-content;
+    margin-bottom: 4.8rem;
+    font-family: "Hanuman", 'Times New Roman', Times, serif;
+    font-size: 2.25rem;
+    line-height: 1;
+    font-weight: 400;
+    color: var(--brand-fourth-300);
+}

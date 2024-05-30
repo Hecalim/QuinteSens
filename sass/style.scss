@@ -1,0 +1,29 @@
+// style.scss
+@use 'abstracts';
+@use 'base';
+@use 'components';
+@use 'layout';
+@use 'pages';
+
+$primary-color: #3498db;
+$secondary-color: #e74c3c;
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: lighten($primary-color, 20%);
+
+  h1 {
+    color: $primary-color;
+    color: red;
+    color: blue
+  }
+
+  p {
+    color: $secondary-color;
+    color: red;
+    font-size: 2rem;
+  }
+}
+

@@ -1,0 +1,28 @@
+// Form
+.map{
+    --red-base: 364 65 59;
+    width: 80%;
+    height: 88%;
+    background: var(--blue-100);
+    border-radius: 1.6rem;
+    overflow: visible;
+    border: solid 1px var(--brand-fourth-100);
+    box-shadow: 0 2px 0 0 var(--brand-fourth-100);
+    // box-shadow: 
+    //     0 0 0 14px var(--brand-primary-300),
+    //     0 0 0 16px var(--brand-fourth-300),
+    //     0 0 0 30px var(--brand-primary-300),
+    //     0 0 0 32px hsla(var(--red-base)/33%),
+    //     0 0 0 36px var(--brand-primary-300),
+    //     0 0 0 32px hsla(var(--red-base)/12%);
+    // ;
+    iframe{
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+    border-radius: 1.6rem;
+
+    }
+}

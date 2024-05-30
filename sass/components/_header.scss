@@ -1,0 +1,12 @@
+@use "../abstracts/index" as abstracts;
+
+.header{
+    @include abstracts.position(sticky, 0, 0, null, 0);
+    z-index: 2000;
+    border-bottom: solid 1px var(--brand-primary-100);
+    .watermark{
+        &__baseline{
+            font-weight: 600;
+        }
+    }
+}

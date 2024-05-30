@@ -1,0 +1,60 @@
+@use '../abstracts/index' as abstracts;
+
+.btn{
+    @include abstracts.flex(row nowrap, center, flex-start);
+    gap: .8rem;
+    width: fit-content;
+    padding: 1.2rem 2.4rem 1.2rem 1.6rem;
+    background-image: linear-gradient(to bottom, var(--brand-fourth-200) 0%, var(--brand-fourth-400) 100%);
+    border-radius: 50vh;
+    font-family: Roboto, Arial, sans-serif;
+    color: var(--brand-primary-100);
+    box-shadow: 
+        inset 0 0 0 1px var(--brand-fourth-400),
+        inset 0 0 2px 2px var(--brand-fourth-200),
+        0 4px 4px 0 rgba(0 0 0 / .20);
+    ;
+    &--xl{
+        gap: 1.4rem;
+        padding-block: 1.6rem;
+        padding-inline: 2.4rem 4rem;
+        font-size: 1.8rem;
+        font-weight: 550;
+        svg{
+            width: 22px !important;
+        }
+    }
+    border: none;
+    svg{
+        @include abstracts.box(20px, auto);
+        path{
+            stroke: currentColor;
+        }
+    }
+    span{
+        line-height: 1;
+    }
+    &:hover{
+        color: var(--grey-100);
+        box-shadow: 
+            inset 0 0 0 1px var(--brand-fourth-400),
+            inset 0 0 2px 2px var(--brand-fourth-100),
+            0 4px 4px 0 rgba(0 0 0 / .20);
+        svg{
+            *{
+                stroke: currentColor;
+            }
+            use{
+                stroke: currentColor;
+            }
+        }
+    }
+    &:active{
+        background-image: linear-gradient(to bottom, var(--brand-fourth-300) 0%, var(--brand-fourth-500) 100%);
+        color: var(--brand-primary-400);
+        box-shadow: 
+            inset 0 0 0 1px var(--brand-fourth-500),
+            inset 0 0 2px 2px var(--brand-fourth-300),
+            0 2px 0 0 rgba(0 0 0 / .2);
+    }
+}

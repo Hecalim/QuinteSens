@@ -1,0 +1,30 @@
+@use "variables" as variables;
+
+@mixin flex($flow: row wrap, $align: flex-start, $just: flex-start){
+    display: flex;
+    flex-flow: $flow;
+    align-items: $align;
+    justify-content: $just;
+}
+
+@mixin position($position: initial, $top: null, $right: null, $bottom: null, $left: null){
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+@mixin box($width, $height:$width){
+    width: $width;
+    height: $height;
+}
+
+// To prefix for differents browsers
+@mixin prefix($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+   
+    // Output standard non-prefixed declaration
+    #{$property}: $value;
+}
