@@ -26,15 +26,24 @@ fieldset{
     width: 100%;
     padding: .8rem 1.2rem .8rem 1.6rem;
     background-color: var(--grey-100);
+    background-repeat: no-repeat;
+    background-position: 1.6rem center;
+    background-size: 20px;
     border: solid 1px var(--brand-secondary-200);
     box-shadow: 0 2px 0 0 var(--brand-secondary-200);
     font-size: 1.6rem;
-    &--icon{
-        &::before{
-            content: 'test';
-            display: block;
-            position: absolute;
-        }
+    &[type=text]{
+        background-size: 16px;
+        padding-left: 4.4rem;
+        background-image: url(images/user.svg);
+    }
+    &[type=email]{
+        padding-left: 4.4rem;
+        background-image: url(images/mail.svg);
+    }
+    &[type=tel]{
+        padding-left: 4.4rem;
+        background-image: url(images/phone.svg);
     }
     &:hover{
         border: solid 1px var(--brand-secondary-400);
