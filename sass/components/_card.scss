@@ -1,0 +1,45 @@
+@use "../abstracts/index" as abstracts;
+
+.card{
+    width: 33%;
+    padding-block: 4rem 1.6rem;
+    background: var(--brand-primary-100);
+    border: solid 1px var(--brand-primary-300);
+    box-shadow: 0 4px 0 0 var(--brand-primary-300);
+    border-radius: 1.6rem;
+    transition: transform .16s linear;
+    &__content{
+        @include abstracts.flex(column nowrap, center, center);
+        transition-duration: 0.48s;
+        overflow: hidden;
+    }
+    &__title{
+        text-align: center;
+        margin-block: 2.4rem;
+    }
+    &__img{
+        position: relative;
+        @include abstracts.box(150px);
+        background: var(--grey-100);
+        border-radius: 999px;
+        overflow: hidden;
+    }
+    &__desc{
+        width: 80%;
+        font-size: 1.25rem;
+        text-align: justify;
+        transform: translateY(40%);
+        opacity: 0;
+        transition: all .48s cubic-bezier(.65,0,.3,1.01);
+    }
+    &:hover & {
+        transform: scale(1.1);
+        &__content{
+            transform: translateY(-20px);
+        }
+        &__desc{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
