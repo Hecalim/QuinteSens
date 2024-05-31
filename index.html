@@ -183,21 +183,42 @@
       <section id="services" class="services full-width bg-brand-primary-100">
         <h3 class="txt-center">Services</h3>
         <h4 class="txt-center">Explore what I have to offer</h4>
-        <ul class="flex items-center just-between">
-          <li>
-            <img src="" alt="">
-            <h5>Accordage</h5>
-            <p></p>
+        <ul class="flex items-stretch just-between gap-x-2">
+          <li class="card">
+            <div class="card__content">
+              <img src="" alt="" class="card__img" />
+              <h5 class="card__title txt-base">Accordage</h5>
+              <p class="card__desc">
+                Occaecat nulla ex excepteur quis excepteur duis do eiusmod.
+                Cupidatat eu ullamco proident ullamco aliqua ea esse ex aliqua
+                elit. Elit commodo magna esse dolore nisi nisi aliqua aute
+                consectetur. Cillum voluptate laboris esse minim ipsum in est
+                magna dolore irure. Eiusmod ut elit irure occaecat laboris
+                eiusmod cupidatat in.
+              </p>
+            </div>
           </li>
-          <li>
-            <img src="" alt="">
-            <h5>Réparations</h5>
-            <p></p>
+          <li class="card">
+            <div class="card__content">
+              <img class="card__img" src="" alt="" />
+              <h5 class="card__title txt-base">Réparations</h5>
+              <p class="card__desc">
+                Nisi in dolor voluptate mollit est nostrud adipisicing. Aliqua
+                deserunt ut cupidatat velit amet esse sit eiusmod deserunt.
+                Velit ipsum ad consectetur deserunt labore occaecat ut dolor
+                eiusmod.
+              </p>
+            </div>
           </li>
-          <li>
-            <img src="" alt="">
-            <h5>Réglages</h5>
-            <p></p>
+          <li class="card">
+            <div class="card__content">
+              <img class="card__img" src="" alt="" />
+              <h5 class="card__title txt-base">Réglages</h5>
+              <p class="card__desc">
+                Officia culpa ad elit aute. Cillum esse quis laboris in
+                consectetur est eu aliqua tempor ipsum reprehenderit. 
+              </p>
+            </div>
           </li>
         </ul>
       </section>
@@ -378,7 +399,9 @@
             </span>
           </p>
         </label>
-        <div class="grid grid--questions breakout m-t-4 p-4 rounded-lg bg-brand-secondary-300 txt-grey-100">
+        <div
+          class="grid grid--questions breakout m-t-4 p-4 rounded-lg bg-brand-secondary-300 txt-grey-100"
+        >
           <h5 class="txt-lg font-normal">Still have question ?</h5>
           <p>
             Can't find the answer you're looking for ? Please chat to our
@@ -433,7 +456,7 @@
             </textarea>
             <span class="warning txt-xs">Vérifiez votre message.</span>
           </fieldset>
-          <button type="submit" class="btn btn--xl">
+          <button type="submit" class="btn btn--xl" aria-label="Envoyer message">
             <svg
               width="22"
               height="18"
