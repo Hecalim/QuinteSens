@@ -11,6 +11,7 @@ body{
     font-size: abstracts.$text-base; // 1.6rem
     font-family: 'Inter', 'Roboto', Arial, sans-serif;
     color: var(--brand-secondary-300);
+    overflow:  hidden visible;
 }
 .block{
     display: block;

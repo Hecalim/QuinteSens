@@ -1,6 +1,16 @@
 @use "../abstracts/index" as abstracts;
 
+#about{
+    background: linear-gradient(
+        to top,
+        var(--brand-primary-100) 0%,
+        var(--brand-primary-100) 50%,
+        var(--brand-primary-300) 50%,
+        var(--brand-primary-300) 100%
+    );
+}
 .about{
+    position: relative;
     box-sizing: border-box;
     display: grid;
     grid-auto-rows: max-content;
