@@ -19,14 +19,14 @@
     }
     &__img{
         position: relative;
-        @include abstracts.box(150px);
+        @include abstracts.box(120px);
         background: var(--grey-100);
         border-radius: 999px;
         overflow: hidden;
     }
     &__desc{
         width: 80%;
-        font-size: 1.25rem;
+        font-size: 1.4rem;
         text-align: justify;
         transform: translateY(40%);
         opacity: 0;

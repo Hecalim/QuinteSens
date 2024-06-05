@@ -8,6 +8,9 @@
     <title>Quinte & Sens</title>
     <script type="module" src="main.js" defer></script>
 
+    <!-- Favion -->
+    <link rel="icon" type="image/x-icon" href="public/images/Logo.svg">
+
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -144,7 +147,7 @@
           <span class="p-l-5">d'accordéons</span>
         </h1>
         <h2 class="txt-grey-100">près de Lannion</h2>
-        <p class="m-y-4 txt-justify">
+        <p class="m-y-6 txt-justify">
           Pariatur ex officia sint do eu mollit aliqua velit ad magna velit
           elit. Ea mollit et quis ex eu fugiat excepteur reprehenderit irure. Ex
           voluptate deserunt ad elit quis occaecat nostrud occaecat ullamco non
@@ -156,11 +159,12 @@
           </svg>
           <span>Contactez-moi</span>
         </a>
+        <div class="hero__bg"></div>
       </section>
 
       <!-- About me -->
-      <section id="about" class="full-width">
-        <div class="about breakout p-4 rounded-lg">
+      <section id="about" class="full-width p-0">
+        <div class="about breakout p-6 rounded-lg">
           <h3>About me</h3>
           <h4 class="txt-brand-primary-200">Lucas Maugis</h4>
           <img
@@ -170,33 +174,32 @@
           />
           <p class="txt-grey-100 txt-justify">
             Passionné de musique et de mécanique, j’ai rapidement décidé de me
-            former au métier d’accordeur / réparateur d’instruments de musique, me
-            permettant ainsi d’allier parfaitement mes deux passions.<br /><br />J’ai
+            former au métier d’accordeur / réparateur d’instruments de musique,
+            me permettant ainsi d’allier parfaitement mes deux passions.<br /><br />J’ai
             effectué mon cursus de formation dans le Gers accompagné du maître
-            artisan Éric Callégari auprès de qui j’ai appris, durant 6 années, les
-            métiers d’accordeur / réparateur de pianos et d’accordéons.<br /><br />Je
-            reviens aujourd’hui à mes racines en Bretagne, avec la volonté de vous
-            proposer les services et tout le soin dont votre instrument a besoin.
+            artisan Éric Callégari auprès de qui j’ai appris, durant 6 années,
+            les métiers d’accordeur / réparateur de pianos et d’accordéons.<br /><br />Je
+            reviens aujourd’hui à mes racines en Bretagne, avec la volonté de
+            vous proposer les services et tout le soin dont votre instrument a
+            besoin.
           </p>
         </div>
       </section>
 
       <!-- Services -->
       <section id="services" class="services full-width bg-brand-primary-100">
-        <h3 class="txt-center">Services</h3>
-        <h4 class="txt-center">Explore what I have to offer</h4>
+        <h3 class="txt-center m-b-6">Services</h3>
+        <!-- <h4 class="txt-center">Explore what I have to offer</h4> -->
         <ul class="flex items-stretch just-between gap-x-2">
           <li class="card">
             <div class="card__content">
               <img src="" alt="" class="card__img" />
               <h5 class="card__title txt-base">Accordage</h5>
               <p class="card__desc">
-                Occaecat nulla ex excepteur quis excepteur duis do eiusmod.
-                Cupidatat eu ullamco proident ullamco aliqua ea esse ex aliqua
-                elit. Elit commodo magna esse dolore nisi nisi aliqua aute
-                consectetur. Cillum voluptate laboris esse minim ipsum in est
-                magna dolore irure. Eiusmod ut elit irure occaecat laboris
-                eiusmod cupidatat in.
+                Je vous propose un service personnalisé d’accordage de votre
+                instrument : chromatique, diatonique ou bandonéon. Swing,
+                Américain, Musette, choisissez la sonorité qui vous correspond.
+                Pour les pianos, l’accordage à domicile est également possible.
               </p>
             </div>
           </li>
@@ -205,10 +208,10 @@
               <img class="card__img" src="" alt="" />
               <h5 class="card__title txt-base">Réparations</h5>
               <p class="card__desc">
-                Nisi in dolor voluptate mollit est nostrud adipisicing. Aliqua
-                deserunt ut cupidatat velit amet esse sit eiusmod deserunt.
-                Velit ipsum ad consectetur deserunt labore occaecat ut dolor
-                eiusmod.
+                Du simple entretien de routine à la restauration complète, en
+                passant par les pannes mécaniques, les bruits parasites etc...
+                Je suis équipé pour réaliser tout les travaux nécessaires à la
+                bonne santé de votre accordéon.
               </p>
             </div>
           </li>
@@ -217,8 +220,8 @@
               <img class="card__img" src="" alt="" />
               <h5 class="card__title txt-base">Réglages</h5>
               <p class="card__desc">
-                Officia culpa ad elit aute. Cillum esse quis laboris in
-                consectetur est eu aliqua tempor ipsum reprehenderit. 
+                Tous les accordéons passant dans mon atelier sont soigneusement
+                contrôlés.
               </p>
             </div>
           </li>
@@ -327,13 +330,75 @@
       <section id="gallery">
         <h3>Gallery</h3>
         <h4>View my work and creations.</h4>
+        <div class="gallery">
+          <img
+            src="public/images/photos/thumbnails/bleu.jpg"
+            alt="Image 1"
+            class="gallery__item"
+            data-highres="public/images/photos/bleu.jpg"
+            data-caption="Légende pour l'image 1"
+          />
+          <img
+            src="public/images/photos/thumbnails/broche.jpg"
+            alt="Image 2"
+            class="gallery__item"
+            data-highres="public/images/photos/broche.jpg"
+            data-caption="Légende pour l'image 2"
+          />
+          <img
+            src="public/images/photos/thumbnails/cavagnolo.jpg"
+            alt="Image 3"
+            class="gallery__item"
+            data-highres="public/images/photos/cavagnolo.jpg"
+            data-caption="Légende pour l'image 3"
+          />
+          <img
+            src="public/images/photos/thumbnails/clapet.jpg"
+            alt=""
+            class="gallery__item"
+            data-highres="public/images/photos/clapet.jpg"
+            data-caption="Légende pour l'image 1"
+          />
+          <img
+            src="public/images/photos/thumbnails/disc.jpg"
+            alt="Image 2"
+            class="gallery__item"
+            data-highres="public/images/photos/disc.jpg"
+            data-caption="Légende pour l'image 2"
+          />
+          <img
+            src="public/images/photos/thumbnails/jaune.jpg"
+            alt="Image 3"
+            class="gallery__item"
+            data-highres="public/images/photos/jaune.jpg"
+            data-caption="Légende pour l'image 3"
+          />
+          <img
+            src="public/images/photos/thumbnails/feraille.jpg"
+            alt="Image 3"
+            class="gallery__item"
+            data-highres="public/images/photos/feraille.jpg"
+            data-caption="Légende pour l'image 3"
+          />
+          <img
+            src="public/images/photos/thumbnails/black.jpg"
+            alt="Image 3"
+            class="gallery__item"
+            data-highres="public/images/photos/black.jpg"
+            data-caption="Légende pour l'image 3"
+          />
+        </div>
+        <div id="lightbox" class="lightbox">
+          <span class="close">&times;</span>
+          <img id="lightbox-img" class="lightbox__content" />
+          <div id="caption" class="lightbox__caption"></div>
+        </div>
       </section>
 
       <!-- FAQ -->
-      <section id="faq" class="flex flex-col bg-brand-third-400 full-width">
+      <section id="faq" class="flex flex-col bg-brand-third-500 full-width">
         <h3 class="txt-center">FAQ</h3>
         <h4 class="txt-center txt-brand-primary-200">Need help ?</h4>
-        <!-- FAQ item 1-->
         <label for="question1" class="faq">
           <span class="faq__question">
             Sur quels types d'accordéons travaillez-vous ?
@@ -349,29 +414,11 @@
             </span>
           </p>
         </label>
-        <!-- FAQ item 2-->
         <label for="question2" class="faq">
-          <span class="faq__question">
-            Proposez-vous des services de réparation d'accordéons
-          </span>
-          <input id="question2" name="faq" type="checkbox" />
-          <span class="faq__icon"></span>
-          <p class="faq__answer">
-            <span>
-              Oui, en tant qu'artisan spécialisé dans la réparation
-              d'accordéons, je propose des services de réparation pour les
-              accordéons de toutes marques. Que ce soit pour des ajustements
-              mineurs, des révisions ou des réparations majeures, je suis équipé
-              pour restaurer votre instrument dans les meilleures conditions.
-            </span>
-          </p>
-        </label>
-        <!-- FAQ item 3-->
-        <label for="question3" class="faq">
           <span class="faq__question">
             Comment puis-je entretenir mon accordéon ?
           </span>
-          <input id="question3" type="checkbox" />
+          <input id="question2" name="faq" type="checkbox" />
           <span class="faq__icon"></span>
           <p class="faq__answer">
             <span>
@@ -387,24 +434,72 @@
             </span>
           </p>
         </label>
-        <!-- FAQ item 4-->
-        <label for="question4" class="faq">
+        <label for="question3" class="faq">
           <span class="faq__question">
-            Proposez-vous d'autres services que la réparation d'accordéons ?
+            Proposez-vous des services de réparation d'accordéons
           </span>
-          <input id="question4" name="faq" type="checkbox" />
+          <input id="question3" name="faq" type="checkbox" />
           <span class="faq__icon"></span>
           <p class="faq__answer">
             <span>
-              Oui, je propose également l'accordage et réglage de pianos à
-              domicile.
+              Oui, en tant qu'artisan spécialisé dans la réparation
+              d'accordéons, je propose des services de réparation pour les
+              accordéons de toutes marques. Que ce soit pour des ajustements
+              mineurs, des révisions ou des réparations majeures, je suis équipé
+              pour restaurer votre instrument dans les meilleures conditions.
+            </span>
+          </p>
+        </label>
+        <label for="question4" class="faq">
+          <span class="faq__question">
+            Pouvez-vous créer un accordéon sur mesure selon mes spécifications
+          </span>
+          <input id="question4" type="checkbox" />
+          <span class="faq__icon"></span>
+          <p class="faq__answer">
+            <span>
+              Je ne fabrique pas d'accordéons à proprement parler. Cependant, il
+              peut être possible d'apporter des modifications sur un accordéon
+              que vous possédez déjà ou que vous souhaitez acquérir. Pour plus
+              d'information, n'hésitez pas à me contacter et me faire part de
+              votre projet.
+            </span>
+          </p>
+        </label>
+        <label for="question5" class="faq">
+          <span class="faq__question">
+            Quelle est la durée typique de fabrication d'un accordéon sur mesure
+            ?
+          </span>
+          <input id="question5" name="faq" type="checkbox" />
+          <span class="faq__icon"></span>
+          <p class="faq__answer">
+            <span>
+              La durée va dépendre des spécificités de votre projet. D'abord, il
+              faut se renseigner auprès de la manufacture qui le réalisera,
+              leurs délais de commandes. Ensuite, ces délais peuvent varier en
+              fonction de leur taux d'activité à ce moment et de la
+              disponibilité des pièces nécessaires à la fabrication de votre
+              accordéon.
+            </span>
+          </p>
+        </label>
+        <label for="question6" class="faq">
+          <span class="faq__question">
+            Proposez-vous d'autres services que la réparation d'accordéons ?
+          </span>
+          <input id="question6" name="faq" type="checkbox" />
+          <span class="faq__icon"></span>
+          <p class="faq__answer">
+            <span>
+              Oui, je propose également l'accordage et réglage de pianos à domicile. 
             </span>
           </p>
         </label>
         <div
           class="grid grid--questions breakout m-t-4 p-4 rounded-lg bg-brand-secondary-300 txt-grey-100"
         >
-          <h5 class="txt-lg font-normal">Still have question ?</h5>
+          <h5 class="txt-xl font-semibold">Still have question ?</h5>
           <p>
             Can't find the answer you're looking for ? Please chat to our
             friendly team.
@@ -425,7 +520,12 @@
         <form action="" id="js-contacts" novalidate>
           <fieldset class="flex flex-col">
             <label for="name" class="label p-l-2 txt-xs">Name</label>
-            <input type="text" id="name" class="input input--icon rounded-full" required />
+            <input
+              type="text"
+              id="name"
+              class="input input--icon rounded-full"
+              required
+            />
             <span class="warning txt-xs"
               >Veuillez renseigner un identifiant valide.</span
             >
@@ -458,7 +558,11 @@
             </textarea>
             <span class="warning txt-xs">Vérifiez votre message.</span>
           </fieldset>
-          <button type="submit" class="btn btn--xl" aria-label="Envoyer message">
+          <button
+            type="submit"
+            class="btn btn--xl"
+            aria-label="Envoyer message"
+          >
             <svg
               width="22"
               height="18"
@@ -477,16 +581,16 @@
             <span>Envoyer</span>
           </button>
         </form>
-        <div id="map" class="map rel">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d168378.52685362598!2d-3.634545596304883!3d48.74533034809212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48122b8ac523c539%3A0x40ca5cd36e63400!2s22300%20Lannion!5e0!3m2!1sfr!2sfr!4v1716823102629!5m2!1sfr!2sfr"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div id="map" class="map flex flex-col rel">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42204.36195764006!2d-3.6168155645922258!3d48.61419549833363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48117ee7e7588201%3A0xfe90068e1a4c4acf!2s22310%20Plufur!5e0!3m2!1sfr!2sfr!4v1717626636643!5m2!1sfr!2sfr" 
+            width="600" height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <span>XX rue Lorem Ipsum<br/>Plufur 22310</span>
         </div>
       </section>
     </main>

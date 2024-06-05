@@ -1,4 +1,7 @@
+@use "../abstracts/index" as abstracts;
+
 .hero{
+    position: relative;
     p{
         max-width: 60ch;
     }
@@ -7,5 +10,26 @@
             width: 24px;
             height: auto;
         }
+    }
+    &__bg{
+        @include abstracts.position(absolute, null, 0, -24%, null);
+        z-index: -1;
+        background: red;
+        background-image: linear-gradient(
+            to top, 
+            var(--brand-primary-300) 0%,
+            var(--brand-primary-100) 100%
+        );
+        @include abstracts.box(64%, auto);
+        aspect-ratio: 1/1;
+        border-radius: 999px;
+        box-shadow: 
+            0 0 0 1.6rem var(--brand-primary-300),
+            0 0 0 1.7rem hsla(30 60% 90% / 64%),
+            0 0 0 3.2rem var(--brand-primary-300),
+            0 0 0 3.3rem hsla(30 60% 90% / 32%),
+            0 0 0 1.6rem var(--brand-primary-300),
+            0 0 0 3.3rem hsla(30 60% 90% / 8%)
+        ;
     }
 }

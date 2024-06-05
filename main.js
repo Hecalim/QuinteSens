@@ -1,9 +1,10 @@
 // main.js
+import "/sass/style.scss"
 
-import "/sass/style.scss";
-
-import { carousel } from "./scripts/carousel.js";
-import { validateForm } from './scripts/form-validation.js';
+import { carousel } from "./scripts/carousel.js"
+import { initGallery } from './scripts/gallery.js'
+import { randomizeGalleryItems } from './scripts/randomize.js'
+import { validateForm } from './scripts/form-validation.js'
 
 document.getElementById('js-contacts').addEventListener('submit', function(event) {
   event.preventDefault();
@@ -11,3 +12,9 @@ document.getElementById('js-contacts').addEventListener('submit', function(event
 });
 
 window.onload = carousel();
+
+document.addEventListener("DOMContentLoaded", function() {
+    randomizeGalleryItems()
+    initGallery()
+
+});

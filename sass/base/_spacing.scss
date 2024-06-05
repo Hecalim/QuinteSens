@@ -2,6 +2,7 @@
 
 $spacing: (
   auto: auto,
+  0: 0,
   0_5: calc(abstracts.$base-unit * 0.5),
   1: calc(abstracts.$base-unit * 1),
   1_5: calc(abstracts.$base-unit * 1.5),
@@ -12,6 +13,7 @@ $spacing: (
   4: calc(abstracts.$base-unit * 4),
   4_5: calc(abstracts.$base-unit * 4.5),
   5: calc(abstracts.$base-unit * 5),
+  6: calc(abstracts.$base-unit * 6)
 );
 
 @function to-string($value) {
