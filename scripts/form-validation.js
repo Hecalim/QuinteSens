@@ -25,6 +25,8 @@ export const validateForm = () => {
       console.log('Formulaire valide et prêt à être soumis.');
       // Ajoutez ici la logique pour envoyer le formulaire via AJAX ou une autre méthode
     }
+    return isValid;
+
   };
   
   const validateField = (element, condition) => {
