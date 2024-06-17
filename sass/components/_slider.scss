@@ -1,0 +1,66 @@
+@use "../abstracts/index" as abstracts;
+
+.slider{
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+    .list{
+        display: flex;
+        min-width: calc(var(--width) * var(--quantity));
+        position: relative;
+        .item{
+            @include abstracts.position(absolute, null, null, null, 100%);
+            @include abstracts.box(var(--width), var(--height));
+            @include abstracts.flex(column nowrap, flex-start, space-between-start);
+            gap: 1.6rem;
+            padding: 2.4rem;
+            border-radius: 1.6rem;
+            font-family: "Solway", "Hanuman", 'Times New Roman', Times, serif;
+            background-color: var(--brand-fourth-200);
+            animation: autoRun 30s linear infinite;
+            transition: filter 0.5s;
+            animation-delay: calc( (30s / var(--quantity)) * (var(--position) - 1) )!important;
+            h5{
+                font-size: 1.8rem;
+                color: var(--brand-secondary-400);
+            }
+            p{
+                display: -webkit-box; 
+                font-family: 'Inter', 'Roboto', Arial, sans-serif;
+                color: #fff;
+                font-size: 1.4rem;
+                font-weight: 400;
+                -webkit-box-orient: vertical; 
+                -webkit-line-clamp: 8; 
+                overflow: hidden; 
+                text-overflow: ellipsis; 
+            }
+            span{
+                align-self: flex-end;
+                color: var(--brand-third-100);
+                text-align: right;
+            }
+            &:hover{
+                filter: grayscale(0.5);
+            }
+        }
+    }
+    &:hover{
+        .item{
+            animation-play-state: paused !important;
+            filter: grayscale(0);
+        }
+    }
+}
+@keyframes autoRun{
+    from{
+        left: 100%;
+    }to{
+        left: calc(var(--width) * -1);
+    }
+}

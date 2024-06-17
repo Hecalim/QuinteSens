@@ -1,30 +1,20 @@
 @use "../abstracts/index" as abstracts;
 
-// Border radius
-.rounded{
-    &-none{
-        border-radius: 0;
-    }
-    &-xs{
-        border-radius: calc(abstracts.$base-unit * 0.66);
-    }
-    &-sm{
-        border-radius: calc(abstracts.$base-unit * 0.8);
-    }
-        border-radius: calc(abstracts.$base-unit * 1);
-    &-md{
-        border-radius: calc(abstracts.$base-unit * 1.25);
-    }
-    &-lg{
-        border-radius: calc(abstracts.$base-unit * 1.75);
-    }
-    &-xl{
-        border-radius: calc(abstracts.$base-unit * 2.25);
-    }
-    &-2xl{
-        border-radius: calc(abstracts.$base-unit * 2.6);
-    }
-    &-full{
-        border-radius: 9999px;
+$rounded:(
+    "xs": calc(abstracts.$base-unit * 0.66),
+    "sm": calc(abstracts.$base-unit * 0.8),
+    "": calc(abstracts.$base-unit * 1),
+    "md": calc(abstracts.$base-unit * 1.25),
+    "lg": calc(abstracts.$base-unit * 1.75),
+    "xl": calc(abstracts.$base-unit * 2.25),
+    "2xl": calc(abstracts.$base-unit * 2.6),
+    "3xl": calc(abstracts.$base-unit * 3),
+    "4xl": calc(abstracts.$base-unit * 3.2),
+    "full": 9999px
+); 
+
+@each $key, $value in $rounded {
+    .rounded#{if($key == "", "", "-#{$key}")} {
+        border-radius: #{$value};
     }
 }

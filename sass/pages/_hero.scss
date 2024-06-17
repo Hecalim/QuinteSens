@@ -2,13 +2,50 @@
 
 .hero{
     position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: repeat(3, max-content) 56px 56px;
+    column-gap: 4rem;
+    row-gap: 3.2rem;
+    &__titles{
+        grid-area: 1/1/2/4;
+        h2{
+            white-space: nowrap;
+            line-height: 1;
+            font-weight: 500;
+        }
+    }
     p{
-        max-width: 60ch;
+        grid-area: 2/1/3/2;
+        max-width: 32ch;
     }
     .btn{
+        grid-area: 3/1/4/2;
         svg{
             width: 24px;
             height: auto;
+        }
+    }
+    > img{
+        grid-area: 4/1/6/2;
+        width: 80%;
+
+    }
+    a:not(.btn){
+        grid-area: 5/3/6/4;
+        text-align: right;
+    }
+    &__images{
+        grid-area: 2/2/5/4;
+        > img{
+            width: 56%;
+        }
+        > div{
+            width: 44%;
+            img{
+                height: 33.3%;
+                width: auto;
+            }
         }
     }
     &__bg{
@@ -31,5 +68,12 @@
             0 0 0 1.6rem var(--brand-primary-300),
             0 0 0 3.3rem hsla(30 60% 90% / 8%)
         ;
+    }
+    img{
+        aspect-ratio: 16/9; 
+        background: red; 
+        // width:280px; 
+        border-radius: 2rem;
+        object-fit: cover;
     }
 }

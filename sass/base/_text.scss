@@ -2,7 +2,7 @@
 
 @mixin txt($size){
     font-size: calc(variables.$text-base * $size);
-    line-height: calc(variables.$text-base * calc($size * 1.5));
+    line-height: calc(variables.$text-base * calc($size * 1.4));
 }
 
 .txt{

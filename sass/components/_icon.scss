@@ -1,0 +1,9 @@
+@use "../abstracts/index" as abstracts;
+
+.icon{
+    display: inline-block;
+    @include abstracts.box(16px, 14px);
+    &--arrow{
+        background-image: url('/images/arrow.svg');
+    }
+}

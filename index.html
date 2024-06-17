@@ -9,7 +9,7 @@
     <script type="module" src="main.js" defer></script>
 
     <!-- Favion -->
-    <link rel="icon" type="image/x-icon" href="public/images/Logo.svg">
+    <link rel="icon" type="image/x-icon" href="/images/Logo.svg" />
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -139,50 +139,77 @@
     <main id="start" class="content-grid">
       <!-- Hero -->
       <section class="hero">
-        <h1 class="flex flex-col font-bold txt-brand-secondary-300">
-          <span>
-            <span class="txt-brand-fourth-300">Artisan </span>
-            <span>réparateur</span>
-          </span>
-          <span class="p-l-5">d'accordéons</span>
-        </h1>
-        <h2 class="txt-grey-100">près de Lannion</h2>
-        <p class="m-y-6 txt-justify">
+        <div class="hero__titles">
+          <h1 class="flex flex-col txt-brand-secondary-300">
+            <span>
+              <span class="txt-brand-fourth-300">Artisan </span>
+              <span>réparateur</span>
+            </span>
+            <span class="p-l-5">d'accordéons</span>
+          </h1>
+          <h2 class="m-t-1 txt-grey-100">près de Lannion</h2>
+        </div>
+        <p class="m-b-6 txt-justify">
           Pariatur ex officia sint do eu mollit aliqua velit ad magna velit
           elit. Ea mollit et quis ex eu fugiat excepteur reprehenderit irure. Ex
-          voluptate deserunt ad elit quis occaecat nostrud occaecat ullamco non
-          reprehenderit sunt nostrud sunt.
+          voluptate deserunt ad elit quis occaecat nostrud.
         </p>
-        <a href="#contacts" class="btn btn--xl">
+        <a href="#contacts" class="btn btn--xl m-b-6">
           <svg viewBox="0 0 22 16">
             <use href="#svg-contacts" />
           </svg>
           <span>Contactez-moi</span>
+        </a>
+        <img src="/images/photos/thumbnails/cavagnolo.jpg" alt="" />
+        <div class="hero__images flex gap-x-2">
+          <img src="/images/photos/thumbnails/disc.jpg" alt="" />
+          <div class="flex flex-col gap-y-2">
+            <img src="/images/photos/thumbnails/bleu.jpg" alt="" />
+            <img src="/images/photos/thumbnails/clapet.jpg" alt="" />
+            <img src="/images/photos/thumbnails/feraille.jpg" alt="" />
+          </div>
+        </div>
+        <a href="#gallery" class="link flex just-end items-center gap-x-1 font-bold">
+          Galerie photos
+          <svg
+            width="16"
+            height="14"
+            viewBox="0 0 16 14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.6134 7.93457C15.861 7.68671 16 7.35073 16 7.00043C16 6.65012 15.861 6.31414 15.6134 6.06628L10.629 1.07919C10.381 0.83121 10.0446 0.691894 9.69394 0.691894C9.34323 0.691894 9.0069 0.83121 8.75891 1.07919C8.51093 1.32718 8.37161 1.66352 8.37161 2.01422C8.37161 2.36492 8.51093 2.70126 8.75891 2.94924L11.4873 5.67853L1.3219 5.67853C0.971309 5.67853 0.63508 5.8178 0.387175 6.0657C0.139271 6.31361 -2.6043e-07 6.64984 -2.75755e-07 7.00043C-2.91079e-07 7.35102 0.139271 7.68725 0.387175 7.93515C0.63508 8.18306 0.971309 8.32233 1.3219 8.32233L11.4873 8.32233L8.75891 11.0507C8.63612 11.1735 8.53872 11.3193 8.47227 11.4797C8.40581 11.6402 8.37161 11.8121 8.37161 11.9858C8.37161 12.1594 8.40581 12.3314 8.47227 12.4918C8.53872 12.6522 8.63612 12.798 8.75891 12.9208C8.8817 13.0436 9.02747 13.141 9.1879 13.2074C9.34834 13.2739 9.52029 13.3081 9.69393 13.3081C9.86759 13.3081 10.0395 13.2739 10.2 13.2074C10.3604 13.141 10.5062 13.0436 10.629 12.9208L15.6134 7.93457Z"
+            />
+          </svg>
         </a>
         <div class="hero__bg"></div>
       </section>
 
       <!-- About me -->
       <section id="about" class="full-width p-0">
-        <div class="about breakout p-6 rounded-lg">
-          <h3>About me</h3>
-          <h4 class="txt-brand-primary-200">Lucas Maugis</h4>
+        <div class="about breakout rounded-xl">
+          <div class="flex flex-col gap-2 p-y-4 p-l-6">
+            <h3 class="m-b-1 capital">à propos de moi</h3>
+            <p class="txt-sm txt-grey-100 txt-justify">
+              Passionné de musique et de mécanique, j’ai rapidement décidé de me
+              former au métier d’accordeur / réparateur d’instruments de
+              musique, me permettant ainsi d’allier mes deux passions.<br /><br />J’ai
+              effectué mon cursus de formation dans le Gers accompagné du maître
+              artisan Éric Callégari auprès de qui j’ai appris, durant 6 années,
+              les métiers d’accordeur / réparateur de pianos et d’accordéons.<br /><br />Je
+              reviens aujourd’hui à mes racines en Bretagne, avec la volonté de
+              vous proposer les services et tout le soin dont votre instrument a
+              besoin.
+            </p>
+            <h4 class="m-b-0 txt-brand-primary-200 txt-base txt-right">
+              Lucas Maugis
+            </h4>
+          </div>
           <img
-            src="public/images/lucas.jpg"
-            alt="Photographie de Lucas Maugis, artisan"
+            src="/images/lucas.jpg"
+            alt="Photographie de Lucas Maugis, artisan réparateur / accordeur d'accordéon."
             class="rounded-xl"
           />
-          <p class="txt-grey-100 txt-justify">
-            Passionné de musique et de mécanique, j’ai rapidement décidé de me
-            former au métier d’accordeur / réparateur d’instruments de musique,
-            me permettant ainsi d’allier parfaitement mes deux passions.<br /><br />J’ai
-            effectué mon cursus de formation dans le Gers accompagné du maître
-            artisan Éric Callégari auprès de qui j’ai appris, durant 6 années,
-            les métiers d’accordeur / réparateur de pianos et d’accordéons.<br /><br />Je
-            reviens aujourd’hui à mes racines en Bretagne, avec la volonté de
-            vous proposer les services et tout le soin dont votre instrument a
-            besoin.
-          </p>
         </div>
       </section>
 
@@ -229,162 +256,174 @@
       </section>
 
       <!-- Review -->
-      <section id="review" class="full-width rel bg-brand-fourth-300">
-        <h3 class="txt-center">Trusted by many</h3>
+      <section id="review" class="full-width relative bg-brand-fourth-300">
+        <h3 class="txt-center">Ils m'ont fait confiance</h3>
         <h4 class="txt-brand-primary-200 txt-center">
-          See what our clients say about us.
+          Découvrez les avis de mes clients.
         </h4>
-        <div class="scroller full-width" data-speed="slow">
-          <ul class="review tag-list scroller__inner rel full-width">
-            <li class="review__item bg-brand-fourth-200 rounded-lg">
-              <h5 class="txt-medium">Résumé avis 1</h5>
-              <p class="flex-grow txt-sm txt-justify">
-                Ullamco consectetur irure aliqua ea.
-              </p>
-              <span class="txt-sm">Nom Prénom</span>
-            </li>
-            <li class="review__item bg-brand-fourth-200 rounded-lg">
-              <h5 class="txt-medium">Résumé avis 2</h5>
-              <p class="flex-grow txt-sm txt-justify">
-                Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
-                duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
-                nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
-                nulla esse sit dolor consectetur.
-              </p>
-              <span class="txt-sm">Nom Prénom</span>
-            </li>
-            <li class="review__item bg-brand-fourth-200 rounded-lg">
-              <h5 class="txt-medium">Résumé avis 3</h5>
-              <p class="flex-grow txt-sm txt-justify">
-                Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
-                duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
-                nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
-                nulla esse sit dolor consectetur. Do sit incididunt eu
-                consequat. Non non sint cupidatat Lorem laborum reprehenderit
-                nostrud. Irure velit mollit reprehenderit cupidatat eu occaecat
-                laboris duis amet ullamco dolor est.
-              </p>
-              <span class="txt-sm">Nom Prénom</span>
-            </li>
-            <li class="review__item bg-brand-fourth-200 rounded-lg">
-              <h5 class="txt-medium">Résumé avis 4</h5>
-              <p class="flex-grow txt-sm txt-justify">
-                Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
-                duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
-                nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
-                nulla esse sit dolor consectetur. Do sit incididunt eu
-                consequat. Non non sint cupidatat Lorem laborum reprehenderit
-                nostrud. Irure velit mollit reprehenderit cupidatat eu occaecat
-                laboris duis amet ullamco dolor est.
-              </p>
-              <span class="txt-sm">Nom Prénom</span>
-            </li>
-            <li class="review__item bg-brand-fourth-200 rounded-lg">
-              <h5 class="txt-medium">Résumé avis 5</h5>
-              <p class="flex-grow txt-sm txt-justify">
-                Ullamco consectetur irure aliqua ea.
-              </p>
-              <span class="txt-sm">Nom Prénom</span>
-            </li>
-            <li class="review__item bg-brand-fourth-200 rounded-lg">
-              <h5 class="txt-medium">Résumé avis 6</h5>
-              <p class="flex-grow txt-sm txt-justify">
-                Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
-                duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
-                nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
-                nulla esse sit dolor consectetur.
-              </p>
-              <span class="txt-sm">Nom Prénom</span>
-            </li>
-            <li class="review__item bg-brand-fourth-200 rounded-lg">
-              <h5 class="txt-medium">Résumé avis 7</h5>
-              <p class="flex-grow txt-sm txt-justify">
-                Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
-                duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
-                nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
-                nulla esse sit dolor consectetur. Do sit incididunt eu
-                consequat. Non non sint cupidatat Lorem laborum reprehenderit
-                nostrud. Irure velit mollit reprehenderit cupidatat eu occaecat
-                laboris duis amet ullamco dolor est.
-              </p>
-              <span class="txt-sm">Nom Prénom</span>
-            </li>
-            <li class="review__item bg-brand-fourth-200 rounded-lg">
-              <h5 class="txt-medium">Résumé avis 8</h5>
-              <p class="flex-grow txt-sm txt-justify">
-                Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
-                duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
-                nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
-                nulla esse sit dolor consectetur. Do sit incididunt eu
-                consequat. Non non sint cupidatat Lorem laborum reprehenderit
-                nostrud. Irure velit mollit reprehenderit cupidatat eu occaecat
-                laboris duis amet ullamco dolor est.
-              </p>
-              <span class="txt-sm">Nom Prénom</span>
-            </li>
-          </ul>
-        </div>
+        <div class="slider full-width w-full" reverse="false" style="
+              --width: 360px;
+              --height: 300px;
+              --quantity: 9;
+          ">
+              <div class="list full-width w-full flex">
+                  <div class="item" style="--position: 1">
+                    <h5>Test1</h5>
+                    <p>
+                      Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
+                      duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
+                      nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
+                      nulla esse sit dolor consectetur. Do sit incididunt eu
+                      consequat. Non non sint cupidatat Lorem laborum reprehenderit
+                      nostrud. Irure velit mollit reprehenderit cupidatat eu occaecat
+                      laboris duis amet ullamco dolor est.
+                    </p>
+                    <span>Nom Prénom</span>
+                  </div>
+                  <div class="item" style="--position: 2">
+                    <h5>test 2</h5>
+                    <p>
+                      Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
+                      duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
+                      nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
+                      nulla esse sit dolor consectetur.
+                    </p>
+                    <span>Nom Prénom</span>
+                  </div>
+                  <div class="item" style="--position: 3">
+                    <h5>test 3</h5>
+                    <p>
+                      Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
+                      duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
+                      nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
+                      nulla esse sit dolor consectetur.
+                    </p>
+                    <span>Nom Prénom</span>
+                  </div>
+                  <div class="item" style="--position: 4">
+                    <h5>test 4</h5>
+                    <p>
+                      Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
+                      duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
+                      nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
+                      nulla esse sit dolor consectetur.
+                    </p>
+                    <span>Nom Prénom</span>
+                  </div>
+                  <div class="item" style="--position: 5">
+                    <h5>test 5</h5>
+                    <p>
+                      Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
+                      duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
+                      nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
+                      nulla esse sit dolor consectetur.
+                    </p>
+                    <span>Nom Prénom</span>
+                  </div>
+                  <div class="item" style="--position: 6">
+                    <h5>test 6</h5>
+                    <p>
+                      Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
+                      duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
+                      nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
+                      nulla esse sit dolor consectetur.
+                    </p>
+                    <span>Nom Prénom</span>
+                  </div>
+                  <div class="item" style="--position: 7">
+                    <h5>test 7</h5>
+                    <p>
+                      Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
+                      duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
+                      nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
+                      nulla esse sit dolor consectetur.
+                    </p>
+                    <span>Nom Prénom</span>
+                  </div>
+                  <div class="item" style="--position: 8">
+                    <h5>test 8</h5>
+                    <p>
+                      Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
+                      duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
+                      nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
+                      nulla esse sit dolor consectetur.
+                    </p>
+                    <span>Nom Prénom</span>
+                  </div>
+                  <div class="item" style="--position: 9">
+                    <h5>test 9</h5>
+                    <p>
+                      Ullamco consectetur irure aliqua ea. Adipisicing nisi qui quis
+                      duis occaecat enim magna fugiat duis quis. Cupidatat elit enim
+                      nisi nulla. Quis sunt culpa nisi pariatur et do mollit ea do
+                      nulla esse sit dolor consectetur.
+                    </p>
+                    <span>Nom Prénom</span>
+                  </div>
+              </div>
+          </div>
       </section>
 
+      
       <!-- Gallery -->
       <section id="gallery">
-        <h3>Gallery</h3>
-        <h4>View my work and creations.</h4>
+        <h3>Galerie</h3>
+        <h4>Jetez un coup d'oeil</h4>
         <div class="gallery">
           <img
-            src="public/images/photos/thumbnails/bleu.jpg"
+            src="/images/photos/thumbnails/bleu.jpg"
             alt="Image 1"
             class="gallery__item"
-            data-highres="public/images/photos/bleu.jpg"
+            data-highres="/images/photos/bleu.jpg"
             data-caption="Légende pour l'image 1"
           />
           <img
-            src="public/images/photos/thumbnails/broche.jpg"
+            src="/images/photos/thumbnails/broche.jpg"
             alt="Image 2"
             class="gallery__item"
-            data-highres="public/images/photos/broche.jpg"
+            data-highres="/images/photos/broche.jpg"
             data-caption="Légende pour l'image 2"
           />
           <img
-            src="public/images/photos/thumbnails/cavagnolo.jpg"
+            src="/images/photos/thumbnails/cavagnolo.jpg"
             alt="Image 3"
             class="gallery__item"
-            data-highres="public/images/photos/cavagnolo.jpg"
+            data-highres="/images/photos/cavagnolo.jpg"
             data-caption="Légende pour l'image 3"
           />
           <img
-            src="public/images/photos/thumbnails/clapet.jpg"
+            src="/images/photos/thumbnails/clapet.jpg"
             alt=""
             class="gallery__item"
-            data-highres="public/images/photos/clapet.jpg"
+            data-highres="/images/photos/clapet.jpg"
             data-caption="Légende pour l'image 1"
           />
           <img
-            src="public/images/photos/thumbnails/disc.jpg"
+            src="/images/photos/thumbnails/disc.jpg"
             alt="Image 2"
             class="gallery__item"
-            data-highres="public/images/photos/disc.jpg"
+            data-highres="/images/photos/disc.jpg"
             data-caption="Légende pour l'image 2"
           />
           <img
-            src="public/images/photos/thumbnails/jaune.jpg"
+            src="/images/photos/thumbnails/jaune.jpg"
             alt="Image 3"
             class="gallery__item"
-            data-highres="public/images/photos/jaune.jpg"
+            data-highres="/images/photos/jaune.jpg"
             data-caption="Légende pour l'image 3"
           />
           <img
-            src="public/images/photos/thumbnails/feraille.jpg"
+            src="/images/photos/thumbnails/feraille.jpg"
             alt="Image 3"
             class="gallery__item"
-            data-highres="public/images/photos/feraille.jpg"
+            data-highres="/images/photos/feraille.jpg"
             data-caption="Légende pour l'image 3"
           />
           <img
-            src="public/images/photos/thumbnails/black.jpg"
+            src="/images/photos/thumbnails/black.jpg"
             alt="Image 3"
             class="gallery__item"
-            data-highres="public/images/photos/black.jpg"
+            data-highres="/images/photos/black.jpg"
             data-caption="Légende pour l'image 3"
           />
         </div>
@@ -397,8 +436,8 @@
 
       <!-- FAQ -->
       <section id="faq" class="flex flex-col bg-brand-third-500 full-width">
-        <h3 class="txt-center">FAQ</h3>
-        <h4 class="txt-center txt-brand-primary-200">Need help ?</h4>
+        <h3 class="txt-center">F.A.Q</h3>
+        <h4 class="txt-center txt-brand-primary-200">Besoin d'infos ?</h4>
         <label for="question1" class="faq">
           <span class="faq__question">
             Sur quels types d'accordéons travaillez-vous ?
@@ -492,17 +531,17 @@
           <span class="faq__icon"></span>
           <p class="faq__answer">
             <span>
-              Oui, je propose également l'accordage et réglage de pianos à domicile. 
+              Oui, je propose également l'accordage et réglage de pianos à
+              domicile.
             </span>
           </p>
         </label>
         <div
           class="grid grid--questions breakout m-t-4 p-4 rounded-lg bg-brand-secondary-300 txt-grey-100"
         >
-          <h5 class="txt-xl font-semibold">Still have question ?</h5>
+          <h5 class="txt-xl font-semibold">D'autres questions ?</h5>
           <p>
-            Can't find the answer you're looking for ? Please chat to our
-            friendly team.
+            Vous ne trouvez pas la réponse à vos questions ? N'hésitez pas à me laisser un message.
           </p>
           <a href="#contacts" class="btn btn--xl">
             <svg viewBox="0 0 22 16">
@@ -514,9 +553,9 @@
       </section>
 
       <!-- Contacts -->
-      <section id="contacts" class="grid grid--contacts">
-        <h3>Let's talk</h3>
-        <h4>Go ahead and send us a brief of your project !</h4>
+      <section id="contacts" class="grid grid--contacts relative">
+        <h3>Contacts</h3>
+        <h4>Parlez-moi de votre projet !</h4>
         <form action="" id="js-contacts" novalidate>
           <fieldset class="flex flex-col">
             <label for="name" class="label p-l-2 txt-xs">Name</label>
@@ -533,7 +572,7 @@
             <input
               type="email"
               id="email"
-              class="input rel rounded-full"
+              class="input relative rounded-full"
               required
             />
             <span class="warning txt-xs"
@@ -546,15 +585,22 @@
             <input
               type="tel"
               id="phone"
-              class="input input--icon rel rounded-full"
+              class="input input--icon relative rounded-full"
             />
             <span class="warning txt-xs"
               >Veuillez renseigner un numéro valide.</span
             >
           </fieldset>
           <fieldset>
-            <label for="comment" class="label p-l-2 txt-xs">Message</label>
-            <textarea name="comment" id="comment" class="input" required>
+            <label for="comment" class="label block p-l-2 m-b-0-5 txt-sm"
+              >Message</label
+            >
+            <textarea 
+              name="comment" 
+              id="comment" 
+              class="input" 
+              required
+            >
             </textarea>
             <span class="warning txt-xs">Vérifiez votre message.</span>
           </fieldset>
@@ -581,17 +627,30 @@
             <span>Envoyer</span>
           </button>
         </form>
-        <div id="map" class="map flex flex-col rel">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42204.36195764006!2d-3.6168155645922258!3d48.61419549833363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48117ee7e7588201%3A0xfe90068e1a4c4acf!2s22310%20Plufur!5e0!3m2!1sfr!2sfr!4v1717626636643!5m2!1sfr!2sfr" 
-            width="600" height="450" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
+        <div id="map" class="map flex flex-col relative">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42204.36195764006!2d-3.6168155645922258!3d48.61419549833363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48117ee7e7588201%3A0xfe90068e1a4c4acf!2s22310%20Plufur!5e0!3m2!1sfr!2sfr!4v1717626636643!5m2!1sfr!2sfr"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
           </iframe>
-          <span>XX rue Lorem Ipsum<br/>Plufur 22310</span>
+          <span>XX rue Lorem Ipsum<br />Plufur 22310</span>
         </div>
+        <dialog id="modal" class="modal bg-brand-primary-300 rounded-lg">
+          <header>
+            <h5 class="modal__title txt-lg"></h5>
+            <button
+              id="jscloseDialog"
+              class="close-button"
+              onclick="modal.close();"
+            ></button>
+          </header>
+          <p class="modal__desc txt-base txt-justify"></p>
+        </dialog>
       </section>
     </main>
 

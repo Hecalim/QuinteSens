@@ -1,3 +1,11 @@
-.rel{
-    position: relative;
+$positions:(
+    'relative': relative,
+    'absolute': absolute,
+    'fixed': fixed,
+    'sticky': sticky
+);
+@each $key, $value in $positions{
+    .#{$value}{
+        position: $value;
+    }
 }

@@ -7,6 +7,7 @@
     padding: 1.2rem 2.4rem 1.2rem 1.6rem;
     background-image: linear-gradient(to bottom, var(--brand-fourth-200) 0%, var(--brand-fourth-400) 100%);
     border-radius: 50vh;
+    border: none;
     font-family: Roboto, Arial, sans-serif;
     color: var(--brand-primary-100);
     box-shadow: 
@@ -24,7 +25,6 @@
             width: 22px !important;
         }
     }
-    border: none;
     svg{
         @include abstracts.box(20px, auto);
         path{
