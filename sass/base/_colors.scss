@@ -98,6 +98,7 @@ $colors: (
     )
 );
 
+// CSS variables in :root
 :root {
     @each $color, $data in $colors {
         $hue-saturation: map-get($data, hue-saturation);
@@ -110,19 +111,33 @@ $colors: (
         }
     }
 }
-  
-    @each $color, $data in $colors {
-        $shades: map-get($data, shades);
 
-        @each $shade, $lightness in $shades {
-            .txt-#{$color}-#{$shade} {
-                color: var(--#{$color}-#{$shade});
-            }
-            .bg-#{$color}-#{$shade} {
-                background-color: var(--#{$color}-#{$shade});
-            }
-            .fill-#{$color}-#{$shade} {
-                fill: var(--#{$color}-#{$shade});
-            }
+// // SCSS variables
+// @each $color, $data in $colors {
+//     $hue-saturation: map-get($data, hue-saturation);
+//     $shades: map-get($data, shades);
+//     $hue: nth($hue-saturation, 1);
+//     $saturation: nth($hue-saturation, 2);
+
+//     @each $shade, $lightness in $shades {
+//         $variable-name: unquote("#{$color}-#{$shade}");
+//         #{$variable-name}: hsl(#{$hue}, #{$saturation}, #{$lightness});
+//     }
+// }
+
+// txt-color-shade and bg-color-shade classes
+@each $color, $data in $colors {
+    $shades: map-get($data, shades);
+
+    @each $shade, $lightness in $shades {
+        .txt-#{$color}-#{$shade} {
+            color: var(--#{$color}-#{$shade});
         }
+        .bg-#{$color}-#{$shade} {
+            background-color: var(--#{$color}-#{$shade});
+        }
+        .fill-#{$color}-#{$shade} {
+            fill: var(--#{$color}-#{$shade});
+        }
+    }
 }

@@ -14,9 +14,10 @@
         min-width: calc(var(--width) * var(--quantity));
         position: relative;
         .item{
-            @include abstracts.position(absolute, null, null, null, 100%);
+            position: absolute;
+            left: 100%;
             @include abstracts.box(var(--width), var(--height));
-            @include abstracts.flex(column nowrap, flex-start, space-between-start);
+            @include abstracts.flex(column nowrap, flex-start, space-between);
             gap: 1.6rem;
             padding: 2.4rem;
             border-radius: 1.6rem;
@@ -59,7 +60,7 @@
 }
 @keyframes autoRun{
     from{
-        left: 100%;
+        left: 100%; 
     }to{
         left: calc(var(--width) * -1);
     }

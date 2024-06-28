@@ -7,7 +7,7 @@
     grid-template-columns:
         [full-width-start] minmax(calc(abstracts.$base-unit * 4), 1fr)
         [breakout-start] .32fr 
-        [content-start] min(100% - calc(abstracts.$base-unit * 8), 88ch)
+        [content-start] min(100% - calc(abstracts.$base-unit * 8), 94ch)
         [content-end] .32fr
         [breakout-end] minmax(calc(abstracts.$base-unit * 4), 1fr)
         [full-width-end];

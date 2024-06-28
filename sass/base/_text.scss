@@ -8,7 +8,7 @@
 .txt{
     // Font size
     &-xs{
-        @include txt(0.75);
+        @include txt(0.8);
     }
     &-sm{
         @include txt(0.9);
@@ -17,13 +17,13 @@
         @include txt(1);
     }
     &-lg{
-        @include txt(1.2);
+        @include txt(1.16);
     }
     &-xl{
-        @include txt(1.45);
+        @include txt(1.4);
     }
     &-2xl{
-        @include txt(1.75);
+        @include txt(1.8);
     }
     &-3xl{
         @include txt(2);
