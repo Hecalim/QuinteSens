@@ -1,6 +1,28 @@
-@use "../abstracts/index" as abstracts;
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+
 
 .watermark{
+    @include mixins.flex(row, center, flex-start);
     font-family: "Hanuman", 'Times New Roman', Times, serif;
     font-weight: 500;
+    &__logo{
+        // width: clamp(32px, 12vw, 80px);
+    }
+    &__baseline{
+        font-variation-settings: "wght" 620;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+    &.tablet &{
+        &__logo{
+            width: clamp(24px, 12vw, 32px);
+        }
+        &__baseline{
+            font-size: clamp(2.4rem, 2vw, 3.2rem);
+        }
+    }
+    &.tablet{
+        margin-inline: auto;
+    }
 }

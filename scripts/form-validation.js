@@ -25,11 +25,6 @@ export const validateForm = () => {
   // Validation du message
   isValid = validateField(comment, comment.value.trim() !== "") && isValid
 
-  // if (isValid) {
-  //   console.log("Formulaire valide et prêt à être soumis.")
-  //   setModalContent(titre, desc)
-  //   modal.showModal()
-  // }
   return isValid
 }
 

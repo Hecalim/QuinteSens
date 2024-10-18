@@ -1,5 +1,7 @@
 @use "../abstracts/variables" as variables;
 
+// $text-base: 1.6rem;
+
 @mixin txt($size){
     font-size: calc(variables.$text-base * $size);
     line-height: calc(variables.$text-base * calc($size * 1.4));

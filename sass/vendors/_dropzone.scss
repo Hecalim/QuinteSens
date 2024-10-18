@@ -1,0 +1,89 @@
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as variables;
+
+
+@import "dropzone/dist/dropzone.css";
+
+.dropzone{
+    @include mixins.flex(column, stretch, center);
+    row-gap: variables.spacing(1);
+    padding: variables.spacing(1);
+    min-height: initial;
+    border: dotted 5px var(--brand-primary-100);
+    border-radius: variables.spacing(2);
+    &:hover{
+        background-color: hsla(var(--brand-primary) 82% / .6);
+    }
+    .dz-message{
+        margin: 1rem 0;
+    }
+    .dz-preview, .dz-preview.dz-image-preview{
+        min-height: initial;
+        @include mixins.flex(row nowrap, center, flex-start);
+        column-gap: variables.spacing(1);
+        margin: unset;
+        padding: variables.spacing(1);
+        background-color: var(--brand-primary-400);
+        border: solid 1px var(--brand-primary-600);
+        border-radius: 8px;
+        .dz-image{
+            // display: none;
+            @include mixins.box(32px);
+        }
+        .dz-details, .dz-details:hover{
+            flex-grow: 1;
+            @include mixins.flex(row nowrap, center, flex-start);
+            column-gap: variables.spacing(1);
+            position: unset;
+            min-width: unset;
+            max-width: unset;
+            opacity: 1;
+            padding: unset;
+            .dz-size{
+                order: 2;
+                margin-bottom: 0;
+                span{
+                    background-color: unset;
+                    padding: unset;
+                    font-size: 1.24rem;;
+                    white-space: nowrap;
+                }
+            }
+            .dz-filename{
+                order: 1;
+                flex-grow: 1;
+                @include mixins.flex(row nowrap, center, flex-start);
+                max-width: 24ch;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 1.24rem;
+                span, span:hover{
+                    display: inline-block;
+                    width: 100%;
+                    text-align: left;
+                    border: none;
+                    background: none;
+                    color: var(--brand-secondary-600);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+        .dz-remove{
+            white-space: nowrap;
+            font-size: 1.24rem;
+        }
+        &:hover{
+            background-color: var(--brand-primary-300);
+            .dz-image{
+                img{
+                    transform: unset;
+                    filter: unset;
+                }
+            }
+        }
+    }
+    .dz-progress{
+        display: none;;
+    }
+}

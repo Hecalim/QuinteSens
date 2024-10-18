@@ -1,4 +1,43 @@
-// units
 $base-unit: .8rem;
 $text-base: 1.6rem;
-// colors
+
+/* Colors (only Hue and Saturation)
+for Luminosity, which create shades
+see /base/colors.scss */
+$brand-primary: 30 60%;
+$brand-secondary: 260 15%;
+$brand-third: 180 60%;
+$brand-fourth: 354 65%;
+$grey: 260 5%;
+$blue: 220 100%;
+$green: 145 100%;
+$orange: 28 78%;
+$red: 8 92%;
+
+// Spacing
+$spacing: (
+    auto: auto,
+    0: 0,
+    "0-5": calc($base-unit * 0.5),
+    1: calc($base-unit * 1),
+    "1-5": calc($base-unit * 1.5),
+    2: calc($base-unit * 2),
+    "2-5": calc($base-unit * 2.5),
+    3: calc($base-unit * 3),
+    "3-5": calc($base-unit * 3.5),
+    4: calc($base-unit * 4),
+    "4-5": calc($base-unit * 4.5),
+    5: calc($base-unit * 5),
+    6: calc($base-unit * 6)
+);
+@function spacing($key) {
+    @return map-get($spacing, $key);
+};
+
+// Animation
+$anim-speed: cubic-bezier(.42,0,.58,1);
+
+
+// Media queries
+$medium: 880px;
+$small: 460px;

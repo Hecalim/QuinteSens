@@ -1,14 +1,12 @@
-export const closeDialog = () => {
-    document.getElementById("jscloseDialog").addEventListener("click", () => {
-        const dialog = document.getElementById("modal")
-        dialog.close()
-    })
+export const setModalContent = (description) => {
+    const modalDesc = document.querySelector("#modal .modal__desc")
+    modalDesc.textContent = description
 }
 
-export const setModalContent = (title, description) => {
-    const modalTitle = document.querySelector("#modal .modal__title")
-    const modalDesc = document.querySelector("#modal .modal__desc")
+export const setModalIcon = (classe) => {
+    const modalIcon = document.querySelector("#modal .modal__icon")
+    modalIcon.classList.remove('fa-check', 'fa-times'); 
     
-    modalTitle.textContent = title
-    modalDesc.textContent = description
+    // Ajoute les nouvelles classes nécessaires
+    modalIcon.classList.add('fas', classe); // 'fas' pour FontAwesome et la classe passée en argument
 }

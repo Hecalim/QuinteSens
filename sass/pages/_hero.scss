@@ -1,10 +1,11 @@
-@use "../abstracts/index" as abstracts;
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as variables;
 
 .hero{
     position: relative;
     display: grid;
-    grid-template-columns: auto 1fr 1fr;
-    grid-template-rows: repeat(3, max-content) 56px 56px;
+    grid-template-columns: 1.2fr 0.8fr 1fr;
+    grid-template-rows: repeat(3, max-content) auto auto;
     column-gap: 4rem;
     row-gap: 3.2rem;
     &__titles{
@@ -17,12 +18,12 @@
     }
     p{
         grid-area: 2/1/3/2;
-        max-width: 32ch;
+        max-width: 40ch;
+        text-indent: 4rem;
     }
     .btn{
         grid-area: 3/1/4/2;
         height: fit-content;
-        padding-block: 2rem;
         svg{
             width: 24px;
             height: auto;
@@ -51,7 +52,7 @@
         }
     }
     &__bg{
-        @include abstracts.position(absolute, null, 0, -24%, null);
+        @include mixins.position(absolute, null, 0, -24%, null);
         z-index: -1;
         background: red;
         background-image: linear-gradient(
@@ -59,7 +60,7 @@
             var(--brand-primary-300) 0%,
             var(--brand-primary-100) 100%
         );
-        @include abstracts.box(64%, auto);
+        @include mixins.box(64%, auto);
         aspect-ratio: 1/1;
         border-radius: 999px;
         box-shadow: 
@@ -75,5 +76,37 @@
         aspect-ratio: 16/8; 
         border-radius: 1.6rem;
         object-fit: cover;
+    }
+    @media screen and (width < variables.$medium){
+        padding-top: variables.spacing(6);
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        row-gap: variables.spacing(4);
+        column-gap: unset;
+        > *:not(div.hero__titles, p, a:not([href="#gallery"])){
+            display: none;
+        }
+        &__titles{
+            grid-row: 1/2;
+        }
+        > p{
+            grid-column: 1/2;
+            grid-row: 2/3;
+            max-width: unset;
+        }
+        > a{
+            grid-row: 3/4;
+        }
+        h1{
+            font-size: clamp(2.4rem, 8vh, 3.2rem);
+            line-height: clamp(2.4rem, 6vh, 3.2rem);
+            text-align: center;
+            span:nth-child(2){
+                padding-left: 0;
+            }
+        }
+        h2{
+            text-align: center;
+        }
     }
 }

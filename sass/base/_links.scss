@@ -6,13 +6,12 @@
 }
 
 .link{
-    @include link-svg((var(--blue-200)));
+    @include link-svg((var(--blue-500)));
     &:hover{
-        @include link-svg(var(--blue-100));
+        @include link-svg(var(--blue-700));
     }
     &:active{
         @include link-svg(var(--red-300));
-
     }
     &--footer{
         color: var(--brand-primary-300);

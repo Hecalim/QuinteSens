@@ -1,12 +1,39 @@
-@use "../abstracts/index" as abstracts;
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as variables;
+
 
 .header{
-    @include abstracts.position(sticky, 0, 0, null, 0);
+    @include mixins.position(sticky, 0, 0, null, 0);
     z-index: 2000;
     border-bottom: solid 1px var(--brand-primary-100);
     .watermark{
         &__baseline{
             font-weight: 600;
+        }
+    }
+    @media screen and (width < variables.$medium){
+        @include mixins.position(fixed, unset, 0, 0, 0);
+        @include mixins.flex(row, center, space-between);
+        padding: 0 .8rem;
+        background-color: var(--brand-secondary-300);
+        border: none;
+        border-radius: .8rem .8rem 0 0;
+        .watermark{
+            &__baseline{
+                display: none;
+            }
+        }
+        &::before, &::after{
+            content: '';
+            position: absolute;
+            display: block;
+            @include mixins.box(16px, 100%);
+            border-radius: 10px;
+            background: url(images/dots.svg) no-repeat;
+        }
+        &::after{
+            transform: scaleX(-1);
+            right: .8rem;
         }
     }
 }

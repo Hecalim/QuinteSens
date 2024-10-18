@@ -1,44 +1,100 @@
-@use "../abstracts/index" as abstracts;
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as variables;
 
-.nav-main{
-    @include abstracts.flex(row nowrap, center, flex-start);
-    width: 400px;
-    padding: 6px;
-    font-family: 'Solway', 'Hanuman', 'Times New Roman', Times, serif;
-    background: var(--brand-primary-200);
-    border: solid 1px var(--brand-primary-400);
-    border-radius: 99px;
-    > li{
-        flex: 1 1 0px;
-        background-color: var(--brand-primary-100);
-        box-shadow: 
-            inset 0 1px 0 0 #fff,
-            0 1px 0 0 var(--brand-primary-400);
-        &:first-child{
-            border-radius: 99px 0 0 99px;
-        }
-        &:not(:first-child){
-            border-left: solid 1px var(--brand-primary-400);
-        }
-        &:last-child{
-            border-radius: 0 99px 99px 0;
-        }
-        a{
-            display: block;
-            padding: 6px 10px;
-            color: var(--brand-secondary-200);
-        }
-        &:hover{
-            background-color: var(--brand-primary-200);
-            box-shadow: 
-                inset 0 1px 0 0 var(--brand-primary-100),
-                0 1px 0 0 var(--brand-primary-400);
-            a{
-                color:var(--brand-secondary-400);
+header{
+    @include mixins.flex(row, center, space-between);
+    nav{
+        @include mixins.flex(row, center, flex-start);
+        .nav-main{
+            @include mixins.flex(row nowrap, center, flex-start);
+            width: 400px;
+            padding: 6px;
+            font-family: 'Solway', 'Hanuman', 'Times New Roman', Times, serif;
+            background: var(--brand-primary-200);
+            border: solid 1px var(--brand-primary-400);
+            border-radius: 99px;
+            > li{
+                flex: 1 1 0px;
+                background-color: var(--brand-primary-100);
+                box-shadow: 
+                    inset 0 1px 0 0 #fff,
+                    0 1px 0 0 var(--brand-primary-400);
+                &:first-child{
+                    border-radius: 99px 0 0 99px;
+                }
+                &:not(:first-child){
+                    border-left: solid 1px var(--brand-primary-400);
+                }
+                &:nth-of-type(3){
+                    border-radius: 0 99px 99px 0;
+                }
+                a{
+                    display: block;
+                    padding: variables.spacing("0-5") variables.spacing(1);
+                    color: var(--brand-secondary-200);
+                    white-space: nowrap;
+                }
+                &:hover{
+                    background-color: hsl(30, 70%, 96%);
+                    box-shadow: 
+                        inset 0 1px 0 0 var(--brand-primary-100),
+                        0 1px 0 0 var(--brand-primary-400);
+                    a{
+                        color:var(--brand-secondary-400);
+                    }
+                }
+                &:active{
+                    background-color: var(--brand-primary-400);
+                }
             }
         }
-        &:active{
-            background-color: var(--brand-primary-400);
+        @media screen and (width < variables.$medium) {
+            width: 100%;
+            justify-content: space-between;
+            align-items: stretch;
+            gap: unset !important;
+            background-color: var(--brand-secondary-300);
+            .nav-main{
+                justify-content: space-around;
+                width: 100%;
+                padding: 0 1.6rem;
+                background-color: unset;
+                border: unset;
+                border-radius: unset;
+                > li{
+                    background-color: unset;
+                    box-shadow: unset;
+                    &:first-child, &:nth-of-type(3), &:not(:first-child){
+                        border: none;
+                        border-radius: unset;
+                    }
+                    a{
+                        @include mixins.flex(column, center, flex-start);
+                        row-gap: .4rem;
+                        column-gap: unset;
+                        flex: 1 1 0px;
+                        padding-block: 1.2rem .8rem;
+                        background-image: unset;
+                        border-radius: unset;
+                        box-shadow: unset;
+                        font-family: "Inter", Roboto, Helvetica, Arial, sans-serif;
+                        color: var(--brand-secondary-100);
+                        font-size: variables.spacing("1-5");
+                        i{
+                            display: inline-block;
+                            @include mixins.box(24px);
+                            font-size: 2.4rem;
+                            color: var(--brand-secondary-200)
+                        }
+                    }
+                    &:hover{
+                        background-color: var(--brand-secondary-100);
+                        a, a i{
+                            color: white;
+                        }
+                    }
+                }
+            }
         }
     }
 }

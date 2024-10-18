@@ -24,7 +24,5 @@
     @each $prefix in $prefixes {
         #{'-' + $prefix + '-' + $property}: $value;
     }
-   
-    // Output standard non-prefixed declaration
     #{$property}: $value;
 }

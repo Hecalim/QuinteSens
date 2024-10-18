@@ -1,0 +1,137 @@
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as variables;
+
+#faq{
+    @media screen and (width < variables.$medium){
+        h3, h4{
+            text-align: center;
+        }
+    }
+    .grid{
+        &--faq{
+            grid-template-columns: [img-start] 42% [img-end faq-start] 1fr [faq-end];
+            > div{
+                grid-column: faq;
+                row-gap: variables.spacing(2);
+            }
+            >img{
+                height: 450px;
+                align-self: self-start;
+                justify-self: center;
+            }
+            @media screen and (width < variables.$medium){
+                @include mixins.flex(column, center, flex-start);
+                row-gap: variables.spacing(2);
+                > img{
+                    display: none;
+                }
+            }
+        }
+        &--questions{
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(2, auto);
+            h5{
+                grid-area: 1/1/2/2;
+            }
+            p{
+                grid-area: 2/1/3/2;
+            }
+            a{
+                grid-area: 1/2/3/3;
+                height: fit-content;
+                align-self: center;
+                justify-self: flex-end;
+            }
+            @media screen and (width < variables.$medium){
+                @include mixins.flex(column, stretch, flex-start);
+                row-gap: variables.spacing(4);
+            }
+        }
+    }
+
+    .faq{
+        display: grid;
+            grid-template-columns: 1fr auto;
+            grid-template-rows: auto auto;
+        width: 100%;
+        padding: variables.spacing(1) variables.spacing(3);
+        background-color: var(--brand-primary-300);
+        border: solid 1px var(--brand-secondary-300);
+        border-radius: 28px;
+        box-shadow: 0 2px 0 2px var(--brand-secondary-300);
+        cursor: pointer;
+        &__question{
+            grid-area: 1/1/2/2;
+            align-self: center;
+            color: var(--brand-secondary-300);
+            font-weight: 600;
+        }
+        &__icon{
+            position: relative;
+            grid-area: 1/2/2/3;
+            align-self: center;
+            justify-self: center;
+            @include mixins.flex(row nowrap, center, center);
+            width: 24px;
+            aspect-ratio: 1/1;
+            border: solid 2px var(--brand-secondary-200);
+            border-radius: 99px;
+            transition: rotate .2s cubic-bezier(.17,.67,.83,.67);
+            &::before, &::after{
+                content: '';
+                position: absolute;
+                display: block;
+                @include mixins.box(3px, 12px);
+                background-color: var(--brand-secondary-300);
+                border-radius: 2px;
+                transition: rotate .2s cubic-bezier(.17,.67,.83,.67);
+            }
+            &::before{
+                rotate: 90deg;
+            }
+        }
+        &__answer{
+            grid-area: 2/1/3/3;
+            display: grid;
+            grid-template-rows: 0fr;
+            margin-block: 0;
+            overflow: hidden;
+            color: var(--brand-third-500);
+            transition: all .2s linear;
+            span{
+                overflow: hidden;
+            }
+        }
+        input[type="checkbox"]{
+            visibility: hidden;
+            grid-area: 1/2/2/3;
+            @include mixins.flex(row nowrap, center, center);
+            @include mixins.box(38px);
+            &:checked{
+                ~ .faq{
+                    &__icon{
+                        rotate: -180deg;
+                        &::after{
+                            rotate: -90deg;
+                            transition-delay: .2s;
+                        }
+                    }
+                    &__answer{
+                        grid-template-rows: 1fr;
+                        margin-block: 2rem;
+                    }
+                }
+            }
+        }
+        @media screen and (width > variables.$small){
+            width: 92%;
+            &:nth-child(even){
+                justify-self: flex-end;
+            }
+        }
+        &:hover{
+            background-color: var(--brand-primary-100);
+        }
+    }
+}
+

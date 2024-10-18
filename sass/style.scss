@@ -1,9 +1,13 @@
 // style.scss
+// @use 'vendors';
+
 @use 'abstracts';
 @use 'base';
 @use 'components';
 @use 'layout';
 @use 'pages';
+
+@import "./vendors/dropzone";
 
 $primary-color: #3498db;
 $secondary-color: #e74c3c;

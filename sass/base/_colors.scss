@@ -1,6 +1,8 @@
+@use "../abstracts/variables" as variables;
+
 $colors: (
     'brand-primary': (
-        hue-saturation: (30, 60%),
+        hue-saturation: (variables.$brand-primary),
         shades: (
             100: 90%,
             200: 82%,
@@ -10,7 +12,7 @@ $colors: (
         )
     ),
     'brand-secondary': (
-        hue-saturation: (260, 15%),
+        hue-saturation: (variables.$brand-secondary),
         shades: (
             100: 68%,
             200: 50%,
@@ -20,7 +22,7 @@ $colors: (
         )
     ),
     'brand-third': (
-        hue-saturation: (180, 60%),
+        hue-saturation: (variables.$brand-third),
         shades: (
             100: 82%,
             200: 66%,
@@ -31,7 +33,7 @@ $colors: (
         )
     ),
     'brand-fourth': (
-        hue-saturation: (354, 65%),
+        hue-saturation: (variables.$brand-fourth),
         shades: (
             100: 75%,
             200: 67%,
@@ -41,7 +43,7 @@ $colors: (
         )
     ),
     'grey': (
-        hue-saturation: (260, 5%),
+        hue-saturation: (variables.$grey),
         shades: (
             50: 98%,
             100: 94%,
@@ -57,17 +59,22 @@ $colors: (
         )
     ),
     'blue': (
-        hue-saturation: (220, 110%),
+        hue-saturation: (variables.$blue),
         shades: (
-            100: 80%,
-            200: 66%,
-            300: 48%,
-            400: 32%,
-            500: 16%
+            100: 92%,
+            200: 80%, // 100
+            300: 72%, 
+            400: 66%, // 200
+            500: 54%,
+            600: 48%, // 300
+            700: 32%, // 400
+            800: 24%,
+            900: 16%, // 500
+            1000: 8%
         )
     ),
     'green': (
-        hue-saturation: (145, 100%),
+        hue-saturation: (variables.$green),
         shades: (
             100: 66%,
             200: 52%,
@@ -77,7 +84,7 @@ $colors: (
         )
     ),
     'orange': (
-        hue-saturation: (28, 78%),
+        hue-saturation: (variables.$orange),
         shades: (
             100: 82%,
             200: 64%,
@@ -87,11 +94,11 @@ $colors: (
         )
     ),
     'red': (
-        hue-saturation: (8, 92%),
+        hue-saturation: (variables.$red),
         shades: (
             100: 88%,
-            200: 72%,
-            300: 60%,
+            200: 74%,
+            300: 68%,
             400: 48%,
             500: 32%
         )
@@ -105,6 +112,7 @@ $colors: (
         $shades: map-get($data, shades);
         $hue: nth($hue-saturation, 1);
         $saturation: nth($hue-saturation, 2);
+        --#{$color}: #{$hue} #{$saturation};
         
         @each $shade, $lightness in $shades {
             --#{$color}-#{$shade}: hsl(#{$hue}, #{$saturation}, #{$lightness});
@@ -112,20 +120,7 @@ $colors: (
     }
 }
 
-// // SCSS variables
-// @each $color, $data in $colors {
-//     $hue-saturation: map-get($data, hue-saturation);
-//     $shades: map-get($data, shades);
-//     $hue: nth($hue-saturation, 1);
-//     $saturation: nth($hue-saturation, 2);
-
-//     @each $shade, $lightness in $shades {
-//         $variable-name: unquote("#{$color}-#{$shade}");
-//         #{$variable-name}: hsl(#{$hue}, #{$saturation}, #{$lightness});
-//     }
-// }
-
-// txt-color-shade and bg-color-shade classes
+// txt, bg and fill classes
 @each $color, $data in $colors {
     $shades: map-get($data, shades);
 

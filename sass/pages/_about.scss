@@ -1,5 +1,5 @@
-@use "../abstracts/index" as abstracts;
-
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as variables;
 
 // Split between 2 sections
 #about{
@@ -16,10 +16,8 @@
     box-sizing: border-box;
     display: grid;
     grid-auto-rows: max-content;
-    grid-template-columns: 
-        calc((100% - calc(abstracts.$base-unit * 4)) * 0.6)
-        calc((100% - calc(abstracts.$base-unit * 4)) * 0.4);
-    column-gap: calc(abstracts.$base-unit * 4);
+    grid-template-columns: 0.6fr 0.4fr;
+    column-gap: variables.spacing(4);
     background-image:
         linear-gradient(
             to bottom, 
@@ -47,5 +45,26 @@
     p{
         grid-area: 1/2/4/3;
         align-self: flex-end;
+    }
+    @media screen and (width < variables.$medium) {
+        grid-column: full-width !important;
+        @include mixins.flex(column, stretch, flex-start);
+        padding: variables.spacing(6) variables.spacing(4);
+        border-radius: unset;
+        div{
+            order: 2;
+            padding: 0;
+            h3{
+                text-align: center;
+            }
+        }
+        img{
+            order: 1;
+            width: clamp(120px, 40vw, 200px);
+            margin-inline: auto;
+            margin-bottom: variables.spacing(4);
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+        }
     }
 }

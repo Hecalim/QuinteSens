@@ -1,20 +1,12 @@
-@use "../abstracts/index" as abstracts;
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as variables;
 
-@mixin borderOutline($color, $color2: $color){
-    border-color: $color;
-    outline: solid 3px $color2;
-}
-@mixin nth($child: null){
-    &:nth-child($child){
-        grid-area: 1/1/1/1;
-    }
-}
 .services{
-    height: 800px;
+    height: 840px;
     display: grid;
-    grid-template-columns: repeat(2, 26%) 48%;
+    grid-template-columns: repeat(2, 30%) 1fr;
     grid-template-rows: repeat(2, max-content) repeat(2, 1fr);
-    gap: 1.6rem;
+    gap: 2.4rem;
     h3{
         grid-area: 1/1/2/4;
     }
@@ -22,54 +14,94 @@
         grid-area: 2/1/3/3;
     }
     > div{
-        // width: 100%;
+        @include mixins.flex(column, flex-start, flex-start);
         min-height: 0;
-        // aspect-ratio: 1/.72;
-        padding-block: .8rem;
-        padding-inline: 1.6rem;
-        background-color: var(--brand-primary-200);
+        padding: variables.spacing(2);
         border: solid 1px var(--brand-primary-200);
-        &.active{ // JS animation
-            border-color: var(--brand-secondary-300);
-            outline: solid 3px var(--brand-secondary-100)
+        box-shadow: 0 2px 8px -4px var(--brand-primary-500);
+        font-size: 1.48rem;
+        transition: transform .2s variables.$anim-speed;
+        i{
+            display: inline-block;
+            @include mixins.box(24px);
+            margin-bottom: 1.6rem;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         h5{
             font-weight: 650;
-            font-size: inherit;
+            font-size: 1.48rem;
         }
-        p{
+        > p{
             display: -webkit-box; 
             -webkit-box-orient: vertical; 
             -webkit-line-clamp: 6; 
             overflow: hidden; 
+            height: fit-content;
+            font-size: 1.48rem;
+            color: var(--grey-600);
             text-align: left;
             text-overflow: ellipsis; 
+            
         }
         &:nth-of-type(1){
             grid-area: 3/1/4/2;
+            i{
+                background-image: url(images/icon/24x24/icon_tune.svg);
+            }
         }
         &:nth-of-type(2){
             grid-area: 3/2/4/3;
+            i{
+                background-image: url(images/icon/24x24/icon_repair.svg);
+            }
         }
         &:nth-of-type(3){
             grid-area: 4/1/5/2;
+            i{
+                background-image: url(images/icon/24x24/icon_settings.svg);
+            }
         }
         &:nth-of-type(4){
             grid-area: 4/2/5/3;
+            i{
+                background-image: url(images/icon/24x24/icon_rent.svg);
+            }
         }
-        &:hover{
-            border-color: var(--blue-300);
-            outline: solid 3px var(--blue-100);
+        &:hover, &.active{
+            transform: translateY(-8px);
         }
     }
     img{
         grid-area: 2/3/5/4;
         display: block;
-        @include abstracts.box(100%);
+        @include mixins.box(100%);
         max-width: 100%;
         max-height: 100%;
         object-fit: cover;
         object-position: bottom right;
         overflow: hidden;
+    }
+    @media screen and (width < variables.$medium){
+        grid-template-rows: repeat(2, auto) repeat(4, 1fr);
+        grid-template-columns: repeat(1,1fr);
+        column-gap: unset;
+        height: unset;
+        div{
+            grid-area: unset;
+            grid-column: 1/2 !important;
+            padding: variables.spacing(3);
+            @for $i from 1 through 4{
+                &:nth-of-type(#{$i}) {
+                    grid-row: #{2 + $i} / #{3 + $i};
+                }
+            }
+            p{
+                line-height: 2rem;
+            }
+        }
+        img{
+            display: none;
+        }
     }
 }

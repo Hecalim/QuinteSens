@@ -1,4 +1,4 @@
-@use "../abstracts/index" as abstracts;
+@use "../abstracts/variables" as variables;
 
 html{
     /* 62.5% of 16px user agent font size is 10px */
@@ -8,7 +8,7 @@ html{
 }
 body{
     /* revert to 16px */
-    font-size: abstracts.$text-base; // 1.6rem
+    font-size: variables.$text-base; // 1.6rem
     font-family: 'Inter', 'Roboto', Arial, sans-serif;
     color: var(--brand-secondary-300);
     overflow:  hidden visible;
@@ -18,6 +18,12 @@ body{
 }
 .inline-block{
     display: inline-block;
+}
+section{
+    padding-block: 7.2rem 8.8rem;
+    @media screen and (width < variables.$small){
+        padding-block: variables.spacing(6);
+    }
 }
 ul{
     padding: 0;

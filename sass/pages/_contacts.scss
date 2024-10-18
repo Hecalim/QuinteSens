@@ -1,33 +1,51 @@
-// Form
-.map{
-    --red-base: 364 65 59;
-    width: 80%;
-    height: 88%;
-    border-radius: 1.6rem;
-    overflow: visible;
-    // box-shadow: 
-    //     0 0 0 14px var(--brand-primary-300),
-    //     0 0 0 16px var(--brand-fourth-300),
-    //     0 0 0 30px var(--brand-primary-300),
-    //     0 0 0 32px hsla(var(--red-base)/33%),
-    //     0 0 0 36px var(--brand-primary-300),
-    //     0 0 0 32px hsla(var(--red-base)/12%);
-    // ;
-    iframe{
-        height: 82%;
-        width: 100%;
-        top: 0;
-        right: 0;
-        left: 0;
-        position: absolute;
-        background: var(--blue-100);
-        border-radius: 1.6rem;
-        border: solid 1px var(--brand-fourth-100);
-        box-shadow: 0 2px 0 0 var(--brand-fourth-100);
-        
-    }
-    span{
-        position: absolute;
-        top: calc(82% + 1.6rem);
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+
+
+.grid{
+    &--contacts{
+        grid-template-columns: [adress-start] 1fr [adress-end form-start] 1fr [form-end];
+        grid-template-rows: repeat(3, auto) 1fr;
+        column-gap: variables.spacing(5);
+        h3{
+            grid-row: 1/2;
+            grid-column: adress;
+        }
+        h4{
+            grid-row: 2/3;
+            grid-column: adress;
+        }
+        p{
+            grid-row: 3/4;
+            grid-column: adress;
+        }
+        adress{
+            grid-column: adress;
+            grid-row: 4/5;
+            height: fit-content;
+            a{
+                color: var(--grey-700);
+                &:not([href*="maps"]):hover{
+                    color: var(--blue-600);
+                }
+                &:visited{
+                    color: var(--grey-700);
+                    &:hover{
+                        color: var(--blue-600);
+                    }
+                }
+            }
+        }
+        form{
+            grid-column: form;
+            grid-row: 1/5;
+            textarea{
+                height: 14vh;
+                min-height: 136px;
+            }
+        }
+        @media screen and (width < variables.$medium){
+            @include mixins.flex(column, stretch, center);
+        }
     }
 }

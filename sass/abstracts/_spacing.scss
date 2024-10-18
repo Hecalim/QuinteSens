@@ -1,0 +1,69 @@
+@use "../abstracts/variables" as variables;
+
+
+@each $key, $value in variables.$spacing {
+  // Margin classes
+  .m-#{$key} {
+    margin: #{$value};
+  }
+  .mx-#{$key} {
+    margin-inline: #{$value};
+  }
+  .my-#{$key} {
+    margin-block: #{$value};
+  }
+  .mt-#{$key} {
+    margin-top: #{$value};
+  }
+  .mr-#{$key} {
+    margin-right: #{$value};
+  }
+  .mb-#{$key} {
+    margin-bottom: #{$value};
+  }
+  .ml-#{$key} {
+    margin-left: #{$value};
+  }
+
+  // Padding classes
+  .p-#{$key} {
+    padding: #{$value};
+  }
+  .px-#{$key} {
+    padding-inline: #{$value};
+  }
+  .py-#{$key} {
+    padding-block: #{$value};
+  }
+  .pt-#{$key} {
+    padding-top: #{$value};
+  }
+  .pr-#{$key} {
+    padding-right: #{$value};
+  }
+  .pb-#{$key} {
+    padding-bottom: #{$value};
+  }
+  .pl-#{$key} {
+    padding-left: #{$value};
+  }
+
+  // Gap classes
+  .gap-#{$key} {
+    gap: #{$value};
+  }
+  .gap-x-#{$key} {
+    column-gap: #{$value};
+  }
+  .gap-y-#{$key} {
+    row-gap: #{$value};
+  }
+}
+
+// Variables CSS
+:root{
+  @each $key, $value in variables.$spacing {
+    --spacing-#{$key}: #{$value};
+  }
+}
+

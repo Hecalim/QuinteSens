@@ -1,40 +1,40 @@
 @use "../abstracts/index" as abstracts;
+@use "../abstracts/variables" as variables;
 
-// TO DO
-// Envoyer les mails sur 
-// Voir pour puovoir ajouter des fichiers et une mise en page plus poussée qu'un simple textarea
 
 fieldset{
+    position: relative;
     padding: 0;
+    padding-bottom: variables.spacing(2);
     border: none;
 }
 .label{
     display: block;
-    margin-bottom: .4rem;
-    font-size: 1.25rem;
-    font-family: 'Solway', 'Hanuman', 'Times New Roman', Times, serif;
+    margin-bottom: variables.spacing(1);
+    font-size: 1.32rem;
     font-weight: 600;
     color: var(--brand-secondary-400);
 }
 .warning{
     display: inline-block;
     width: 100%;
-    position: relative;
-    top: .8rem;
-    font-family: 'Solway', 'Hanuman', 'Times New Roman', Times, serif;
-    font-size: 1.2rem;
-    line-height: 1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 1.08rem;
+    line-height: 0.8;
     font-weight: 600;
-    color: var(--red-300);
+    color: var(--red-400);
     text-align: right;
     visibility: hidden;
 }
 .input{
     width: 100%;
-    padding: .8rem 1.2rem .8rem 1.6rem;
-    background-color: var(--grey-100);
+    padding-block: variables.spacing(1);
+    padding-inline: variables.spacing("1-5") variables.spacing(2);
+    background-color: var(--brand-primary-100);
     background-repeat: no-repeat;
-    background-position: 1.6rem center;
+    background-position: variables.spacing(2) center;
     background-size: 20px;
     border: solid 1px var(--brand-secondary-200);
     box-shadow: 0 2px 0 0 var(--brand-secondary-200);
@@ -53,34 +53,28 @@ fieldset{
         background-image: url(images/phone.svg);
     }
     &:hover{
+        background-color: #fff;
         border: solid 1px var(--brand-secondary-400);
         box-shadow: 0 2px 0 0 var(--brand-secondary-400);
     }
     &:focus{
+        background-color: #fff;
         outline: transparent;
         box-shadow:
             0 2px 0 0 var(--brand-secondary-400),
-            0 0 0 2px var(--blue-200),
-            0 2px 0 2px var(--blue-200);
+            0 0 0 2px var(--blue-300),
+            0 2px 0 2px var(--blue-300);
         ;
     }
     &__error{
-        outline: transparent;
-        box-shadow:
-            0 2px 0 0 var(--red-500),
-            0 0 0 2px var(--red-300),
-            0 2px 0 2px var(--red-300);
-        ;
+        border-color: var(--red-500);
+        outline: solid 3px var(--red-300);
+        box-shadow: none;
     }
 }
 textarea{
     border-radius: 12px;
-    height: 20vh;
-    min-height: 180px;
     resize: vertical;
-    + .warning{
-        top: -.8rem;
-    }
 }
 input{
     &[type="submit"]{
@@ -90,5 +84,17 @@ input{
             @include abstracts.box(22px, 15px);
             background-image: url(../../public/images/send.svg);
         }
+    }
+}
+adress{
+    @media screen and (width < variables.$small) {
+        *:not(h5){
+            margin-bottom: variables.spacing(2) !important;
+        }
+    }
+}
+form{
+    @media screen and (width < variables.$small) {
+        margin-top: variables.spacing(2);
     }
 }

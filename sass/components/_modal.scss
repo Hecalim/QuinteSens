@@ -1,14 +1,41 @@
-@use "../abstracts/index" as abstracts;
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+
+
+@mixin modal-color($bg, $txt, $border:$txt){
+    background-color: $bg;
+    border-color: $border;
+    color: $txt;
+}
 
 .modal{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: fixed;
+    bottom: 48px;
+    right: 48px;
+    @include mixins.flex(row, center, flex-start);
+    width: fit-content;
     max-width: 50ch;
-    border: none;
-    padding: 3.2rem;
-    box-shadow: 0 8px 32px -16px rgba(0 0 0 / .8);
-    &::backdrop{
-        background-color: rgba(0 0 0 / .4);
+    border-style: solid;
+    border-width: 1px;
+    font-variation-settings: "wght" 620;
+    transform: translateX(150%);
+    transition: transform 1s cubic-bezier(0,.64,.56,.99);
+    &--visible{
+        transform: translateX(0);
+        transition-duration: .2s;
+    }
+    &--neutral{
+        @include modal-color(var(--grey-300), var(--grey-700), var(--grey-500));
+    }
+    &--valid{
+        @include modal-color(var(--green-100), var(--green-500));
+    }
+    &--invalid{
+        @include modal-color(var(--red-100), var(--red-500), var(--red-200));
+    }
+    i{
+        @include mixins.flex(row, center, center);
+        border: solid 1px currentColor;
+        border-radius: 50%;
     }
 }

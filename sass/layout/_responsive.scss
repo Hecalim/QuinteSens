@@ -1,0 +1,17 @@
+@use "../abstracts/variables" as variables;
+
+.mobile{
+    @media screen and (width > variables.$small) {
+        display: none !important;
+    }
+}
+.tablet{
+    @media screen and (width > variables.$medium) {
+        display: none !important;
+    }
+}
+.desktop{
+    @media screen and (width < variables.$medium) {
+        display: none !important;
+    }
+}
