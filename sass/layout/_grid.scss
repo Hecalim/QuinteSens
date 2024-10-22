@@ -1,4 +1,5 @@
 @use "../abstracts/index" as abstracts;
+@use "../abstracts/variables" as variables;
 
 // Main flow
 .content-grid,
@@ -11,6 +12,15 @@
         [content-end] .32fr
         [breakout-end] minmax(calc(abstracts.$base-unit * 4), 1fr)
         [full-width-end];
+    @media screen and (width < variables.$medium){
+        grid-template-columns: 
+            [full-width-start] minmax(calc(abstracts.$base-unit * 2), 1fr)
+            [breakout-start] .32fr 
+            [content-start] min(100% - calc(abstracts.$base-unit * 4), 96ch)
+            [content-end] .32fr
+            [breakout-end] minmax(calc(abstracts.$base-unit * 2), 1fr)
+            [full-width-end];
+    }
     > :not(.breakout, .full-width){
         grid-column: content;
     }

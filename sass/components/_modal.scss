@@ -38,4 +38,11 @@
         border: solid 1px currentColor;
         border-radius: 50%;
     }
+    @media screen and (width < variables.$medium){
+        z-index: 1000;
+        bottom: 80px;
+        &--visible{
+            right: .8rem;
+        }
+    }
 }
