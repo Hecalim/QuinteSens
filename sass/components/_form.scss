@@ -42,15 +42,15 @@ fieldset{
     &[type=text]{
         background-size: 16px;
         padding-left: 4.4rem;
-        background-image: url(images/user.svg);
+        background-image: url(/images/user.svg);
     }
     &[type=email]{
         padding-left: 4.4rem;
-        background-image: url(images/mail.svg);
+        background-image: url(/images/mail.svg);
     }
     &[type=tel]{
         padding-left: 4.4rem;
-        background-image: url(images/phone.svg);
+        background-image: url(/images/phone.svg);
     }
     &:hover{
         background-color: #fff;
@@ -75,16 +75,6 @@ fieldset{
 textarea{
     border-radius: 12px;
     resize: vertical;
-}
-input{
-    &[type="submit"]{
-        &::before{
-            content: '';
-            display: block;
-            @include abstracts.box(22px, 15px);
-            background-image: url(../../public/images/send.svg);
-        }
-    }
 }
 adress{
     @media screen and (width < variables.$small) {
