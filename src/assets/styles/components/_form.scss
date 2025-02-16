@@ -42,15 +42,15 @@ fieldset{
     &[type=text]{
         background-size: 16px;
         padding-left: 4.4rem;
-        background-image: url(/images/user.svg);
+        background-image: url('/src/assets/images/user.svg');
     }
     &[type=email]{
         padding-left: 4.4rem;
-        background-image: url(/images/mail.svg);
+        background-image: url('/src/assets/images/mail.svg');
     }
     &[type=tel]{
         padding-left: 4.4rem;
-        background-image: url(/images/phone.svg);
+        background-image: url('/src/assets/images/phone.svg');
     }
     &:hover{
         background-color: #fff;

@@ -29,7 +29,7 @@
             display: block;
             @include mixins.box(16px, 100%);
             border-radius: 10px;
-            background: url(/images/dots.svg) no-repeat;
+            background: url(../images/dots.svg) no-repeat;
         }
         &::after{
             transform: scaleX(-1);

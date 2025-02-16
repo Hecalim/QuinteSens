@@ -47,25 +47,25 @@
         &:nth-of-type(1){
             grid-area: 3/1/4/2;
             i{
-                background-image: url(/images/icon/24x24/icon_tune.svg);
+                background-image: url('/src/assets/images/icon/24x24/icon_tune.svg');
             }
         }
         &:nth-of-type(2){
             grid-area: 3/2/4/3;
             i{
-                background-image: url(/images/icon/24x24/icon_repair.svg);
+                background-image: url('/src/assets/images/icon/24x24/icon_repair.svg');
             }
         }
         &:nth-of-type(3){
             grid-area: 4/1/5/2;
             i{
-                background-image: url(/images/icon/24x24/icon_settings.svg);
+                background-image: url('/src/assets/images/icon/24x24/icon_settings.svg');
             }
         }
         &:nth-of-type(4){
             grid-area: 4/2/5/3;
             i{
-                background-image: url(/images/icon/24x24/icon_rent.svg);
+                background-image: url('/src/assets/images/icon/24x24/icon_rent.svg');
             }
         }
         &:hover, &.active{
